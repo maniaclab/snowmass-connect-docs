@@ -23,8 +23,8 @@ validating with your institution credentials. Navigate to the OSG Snowmass21 Col
 
 Shown in the image above are two possible destinations for the data.
 
-1. Navigate to `/stash/collab/project/snowmass21` if data are to be shared by multiple users.
-2. Navigate to `/stash/collab/user/<user_id>` if data are for the exclusive use of a single user.
+1. Navigate to `/cephfs/osg/collab/project/snowmass21` if data are to be shared by multiple users.
+2. Navigate to `/cephfs/osg/user/<user_id>` if data are for the exclusive use of a single user.
 In both cases, users can create subdirectories and organize content by either using the Globus client interface or from the login.snowmass21.io node.
 
 On the right panel of the Globus Connect client tool you can search and connect to another collection. 
