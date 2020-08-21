@@ -101,7 +101,7 @@ For an introduction on managing your jobs with HTCondor we refer to [this](https
   
 2. You must always populate the project name field, e.g. `+ProjectName="snowmass21.energy"`, in your HTCondor submission script to:
     * Ensure your job is validated for HTCondor to run it on the OSG grid
-    * Job statistics are properly collected and displayed on the OSG monitoring dashboard for the snowmass project: `https://bit.ly/3j36bAc`
+    * Job statistics are properly collected and displayed on the [OSG monitoring dashboard](https://bit.ly/3j36bAc) for the snowmass project.
 
 ## Data Management and Grid Transfer
 
