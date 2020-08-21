@@ -1,7 +1,7 @@
 ## General purpose tutorials
 
-All of the OSG Connect tutorials are available as repositories on Github. These tutorials are tested regularly and should work as is, 
-but if you experience any issues please contact us.
+OSG provides a list of tutorials available as repositories on Github. These tutorials are tested regularly and should work as is, 
+but if you experience any issues please contact us. Users on the Snowmass login node can also access those.
 
 ## Tutorial commands
 
