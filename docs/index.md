@@ -5,9 +5,9 @@ the Open Science Grid (OSG) via the Snowmass Connect service hosted at the Unive
   
 ## Getting Started
 
-Snowmass Connect is a job submission service providing access to the distributed cyberinfrastructure of the Open Science Grid. To sign up, visit [https://connect.snowmass21.io](https://connect.snowmass21.io). Users will be notified by email once their membership request has been approved. It is important that you upload your ssh-keys following the instructions on the portal. The process will create your home directory on the Snowmass submit node and grant you access via passwordless ssh.
+Snowmass Connect is a job submission service providing access to the distributed cyberinfrastructure of the Open Science Grid. To sign up, visit [https://connect.snowmass21.io](https://connect.snowmass21.io). You will be notified by email once your membership request has been approved. It is important that you upload your ssh-keys following the instructions on the portal. The process will create your home directory on the Snowmass submit node and grant you access via passwordless ssh.
 
-In order to be able to submit jobs to the OSG users should follow up with a request to be added to a particular subgroup: snowmass21.energy or snowmass21.cosmic. An email back to the user will confirm their addition to their requested subgroup project. 
+In order to be able to submit jobs to the OSG you should follow up with a request to be added to a particular subgroup: snowmass21.energy or snowmass21.cosmic. An email back will confirm their addition to their requested subgroup project. 
 
 ## Login to the submit node
 
@@ -37,14 +37,14 @@ users can move data in from their home institutions.
 
 1. Home directory. As mentioned above, your home directory will have 50GB of storage  available and can
 be used for scripts, submission files and small size data. Large input files for jobs on the grid should not be stored here.
-2. OSG storage accebible from the login node at `/collab`. Users will receive a 1TB quota for their personal user space, and there is a shared 50TB quota for the project space. Larger space allocations can be accommodated on a case-by-case basis. Users should store their data in either of two subdirectories:  
+2. OSG storage accebible from the login node at `/collab`. You will receive a 1TB quota for their personal user space, and there is a shared 50TB quota for the project space. Larger space allocations can be accommodated on a case-by-case basis. You should store their data in either of two subdirectories:  
     * For private user data: `/collab/user/<user_id>`  
     * For shared data among the members of the Snowmass21 collaboration:`/collab/project/snowmass21`
 3. Local storage in`/scratch`. *This is not available for user data at the moment. 200 TB will be*
 *provisioned to allow users to create work directories and launch jobs from there.*
-*Users will be notified when this storage becomes available. Documentation here will be updated accordingly with more details.
+*We will notify users when this storage becomes available. Documentation here will be updated accordingly with more details.
 
-Users can transfer data from external institutions to Snowmass Connect storage using any of the three following methods:
+You can transfer data from external institutions to Snowmass Connect storage using any of the three following methods:
 
 1. **scp**. For example: `scp -r <file_or_directory> <user_id>@login.snowmass.io:/collab/user/<user_id>/.` will copy a file or a directory
 from your local machine to your user directory on the OSG storage. The ssh-keys used for your profile on the Snowmass Connect portal 
@@ -76,7 +76,7 @@ This section provides a short introduction to submitting jobs to the OSG from th
 
 Refer to the [HTCondor manual](https://htcondor.readthedocs.io/en/stable/users-manual/index.html) for more information on the declared parameters and on customizing your submission scripts.
 
-When the HTCondor script above is submitted, the user would request a remote worker node with 1 core and 1 GB to run the `run.sh` executable. In this case, `run.sh` is a shell script that contains a list of commands that executes your workload on the worker node.  For example: 
+When the HTCondor script above is submitted, you request a remote worker node with 1 core and 1 GB to run the `run.sh` executable. In this case, `run.sh` is a shell script that contains a list of commands that executes your workload on the worker node.  For example: 
 
     #/bin/bash
     ./code_executable <input_file> <output_file>
@@ -84,10 +84,9 @@ When the HTCondor script above is submitted, the user would request a remote wor
 
 The parameter `should_transfer_files = YES` instructs HTCondor to use the HTCondor file transfer 
 method to transfer the `Executable` to the remote host and the job files `Error` (stderr) , `Output` (stdout) and `Log` 
-back to user's directory on the submit host. Users have a number of options to transfer
-their code executables and input/output files to the remote worker node, described in the next section.
+back to your directory on the submit host. You will have a number of options to transfer code executables and input/output files to the remote worker node, described in the next section.
 
-Users can submit the job script to the OSG via the HTCondor command on the Snowmass login node: 
+You can submit the job script to the OSG via the HTCondor command on the Snowmass login node as: 
 `condor_submit myjob.submit`, which will return a unique `<JobID>` number. 
 You can use the `<JobID>` to query the status of your job with `condor_q <JobID>`
 
@@ -106,7 +105,7 @@ For an introduction on managing your jobs with HTCondor we refer to [this](https
 ## Data Management and Grid Transfer
 
 This section describes recommendations and options for transferring data to the from remote woker nodes as part of a job submission to the OSG.
-As disussed above, users should place their input data for processing on the Open Science Grid in `/collab/user/<user_id>` or `/collab/project/snowmass21`. Data can be transferred to the grid as part of an OSG job using three different methods depending on the file size.
+As disussed above, you should place their input data for processing on the Open Science Grid in `/collab/user/<user_id>` or `/collab/project/snowmass21`. Data can be transferred to the grid as part of an OSG job using three different methods depending on the file size.
 
 1. HTCondor File Transfer. This method is recommended for the majority of computational workflows running on the OSG. Users can employ this method if the total size of the input data per job does not exceed 1 GB. In addition, OSG recommends that the output data per job that need to be transfered back does not exceed 1 GB as well. To enable HTCondor File transfers for your input and output data insert the following parameters anywhere in your HTCondor submit file:
 
@@ -131,4 +130,4 @@ A list of HTCondor submission examples to the OSG with instructions for users to
 
 ## Support and Consultation
 
-Snowmass21 Connect is supported by the University of Chicago and Open Science Grid staff. To report issues with the service or to request a consultation on submitting and running jobs on the OpenScienceG Grid please submit a ticket to <support@opensciencegrid.org>.
+Snowmass21 Connect is supported by the University of Chicago and Open Science Grid staff. To report issues with the service or to request a consultation on submitting and running jobs on the OpenScienceG Grid please submit a ticket to <help@opensciencegrid.org>.
