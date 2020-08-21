@@ -9,7 +9,7 @@ Snowmass Connect is a job submission service providing access to the distributed
 
 In order to be able to submit jobs to the OSG you should follow up with a request to be added to a particular subgroup: snowmass21.energy or snowmass21.cosmic. An email back will confirm their addition to their requested subgroup project. 
 
-## Login to the submit node
+## Login to the Submit Node
 
 Once you upload your ssh-keys in the Snowmass Connect portal you can connect to the login node via passwordless ssh as:
 
@@ -30,7 +30,7 @@ modules using the `module avail` command. You can load a module with the `module
 nodes where the module environment is available, discussed in the [Job submission](#Job-submissions-to-the-OSG) section.
 
 
-## Storage access
+## Storage Access
 
 This section describes the storage locations accessible by the users on the on when connected to Snowmass login node. It also describes the means by which
 users can move data in from their home institutions.
@@ -58,7 +58,7 @@ must stored on the source machine.
 data to the OSG storage can be found here: [Globus Connect instructions](globus.md)
 
  
-## Job submissions to the OSG
+## Job Submissions to the OSG
 
 This section provides a short introduction to submitting jobs to the OSG from the Snowmass Connect login node using the snowmass21.energy subgroup as the project name. A minimal HTCondor submission script, `myjob.submit`, to the OSG is inlined below:
 
