@@ -6,7 +6,7 @@ Instructions on how to set up Globus Connect Personal can be found
 against the Globus collection "OSG Connect CI Logon" using the GLobus Connect client. 
 You can search for the collection by name in the search bar of the File Manager.
 
-In order to access the OSG storage for Snowmass via Globus online, users must have an institutional 
+In order to access the OSG storage for Snowmass via Globus online, you must have an institutional 
 based grid certificate issued by CILogon. To obtain one follow the steps below:
 
 1. Logon with your institutional credentials at [http://cilogon.org](http://cilogon.org)
@@ -31,5 +31,4 @@ On the right panel of the Globus Connect client tool you can search and connect 
 The latter can be your own laptop/server or a collaboration end point that has provided a Globus Connect door for the researchers to use. To transfer files 
 you can select the list files from your local computer and then select Start. To transfer files out simply reverse the direction of the process.
 
- **Important** Users can not access their home directories in the snowmass21 login node over the Globus door. However, users have access to the /stash/collab directory when they login to login.snowmass21.io. 
- Files can be moved or copied over to their home directory. 
+ **Important** You can not access your home directories on the snowmass21 login node over the Globus door. However, you have access to the /stash/collab directory when they login to login.snowmass21.io. Files can then be moved or copied over to your home directory. 
