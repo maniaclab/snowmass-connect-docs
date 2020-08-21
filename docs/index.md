@@ -7,7 +7,7 @@ the Open Science Grid (OSG) via the Snowmass Connect service hosted at the Unive
 
 Snowmass Connect is a job submission service providing access to the distributed cyberinfrastructure of the Open Science Grid. To sign up, visit [https://connect.snowmass21.io](https://connect.snowmass21.io). Users will be notified by email once their membership request has been approved. It is important that you upload your ssh-keys following the instructions on the portal. The process will create your home directory on the Snowmass submit node and grant you access via passwordless ssh.
 
-In order to be able to submit jobs to the OSG users should follow up with a request to be added to a particular subgroup: snowmass21.cosmic or snowmass21.energy. An email back to the user will confirm their addition to the subgroup projects. 
+In order to be able to submit jobs to the OSG users should follow up with a request to be added to a particular subgroup: snowmass21.energy or snowmass21.cosmic. An email back to the user will confirm their addition to their requested subgroup project. 
 
 ## Login to the submit node
 
@@ -60,8 +60,7 @@ data to the OSG storage can be found here: [Globus Connect instructions](globus.
  
 ## Job submissions to the OSG
 
-This section provides a short introduction to submitting jobs to the OSG from the Snowmass Connect login node. 
-A minimal HTCondor submission script, `myjob.submit`, to the OSG is inlined below:
+This section provides a short introduction to submitting jobs to the OSG from the Snowmass Connect login node using the snowmass21.energy subgroup as the project name. A minimal HTCondor submission script, `myjob.submit`, to the OSG is inlined below:
 
     Universe = Vanilla
     Executable     = run.sh
@@ -72,7 +71,7 @@ A minimal HTCondor submission script, `myjob.submit`, to the OSG is inlined belo
     WhenToTransferOutput = ON_EXIT
     request_cpus = 1
     request_memory = 1 GB
-    +ProjectName="snowmass21"
+    +ProjectName="snowmass21.energy"
     Queue 1
 
 Refer to the [HTCondor manual](https://htcondor.readthedocs.io/en/stable/users-manual/index.html) for more information on the declared parameters and on customizing your submission scripts.
@@ -100,9 +99,9 @@ For an introduction on managing your jobs with HTCondor we refer to [this](https
     * Insert the following parameter in your submission script: `Requirements = (HAS_MODULES =?= TRUE)`. This will request a worker node on a site where the OSG modules are available
     * Before you invoke your executable inside the `run.sh` script load the modules as: `module load module1 module2`
   
-2. You must always declare your project name, `+ProjectName="snowmass21"`, in your HTCondor submission script to:
+2. You must always populate the project name field, e.g. `+ProjectName="snowmass21.energy"`, in your HTCondor submission script to:
     * Ensure your job is validated for HTCondor to run it on the OSG grid
-    * Job statistics are properly collected and displayed on the OSG monitoring dashboard for the snowmass project: `https://gracc.opensciencegrid.org/`
+    * Job statistics are properly collected and displayed on the OSG monitoring dashboard for the snowmass project: `https://bit.ly/3j36bAc`
 
 ## Data Management and Grid Transfer
 
