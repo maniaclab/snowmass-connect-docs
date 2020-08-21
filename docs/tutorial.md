@@ -40,8 +40,8 @@ The following tutorials pre-installed. Some additional tutorials specific to Sno
     scaling ................ Learn to steer jobs to particular resources
     scaling-up-resources ... A simple multi-job demonstration
     software ............... Software access tutorial
-    `~~stash-cvmfs ............ Shows how to use stash-cvmfs for input data transfer~~`
-    ~~stash-http ............. Retrieve job input files from Stash via HTTP~~
+ ~~`stash-cvmfs ............ Shows how to use stash-cvmfs for input data transfer`~~
+ ~~`stash-http ............. Retrieve job input files from Stash via HTTP`~~
     tensorflow-matmul ...... Tensorflow math operations as a singularity container job on the OSG - matrix multiplication
 
 ## Install and Setup a Tutorial
