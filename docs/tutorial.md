@@ -6,17 +6,13 @@ OSG provides a list of tutorials available as repositories on Github. These tuto
 
 From the Snowmass Connect login node, the following tutorial commands are available:
 
-$ tutorial
-$ tutorial list
-$ tutorial info <tutorial-name>
-$ tutorial <tutorial-name>
-
     $ tutorial
     $ tutorial list
     $ tutorial info <tutorial-name>
     $ tutorial <tutorial-name>
 
 ## Available tutorials
+
 The following tutorials pre-installed. Additional tutorials specific to Snowmass21 might be deployed there as well. To see what is currently available: 
 
     $ tutorial list
