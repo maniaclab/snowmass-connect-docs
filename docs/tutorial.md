@@ -1,8 +1,8 @@
-## General purpose tutorials
+## General Purpose Tutorials
 
 OSG provides a list of tutorials available as repositories on Github. These tutorials are designed for OSG submit nodes, are tested regularly and should work as is, but if you experience any issues please contact us. Users on the Snowmass login node should be able to run most of those. 
 
-## Tutorial commands
+## Tutorial Commands
 
 From the Snowmass Connect login node, the following tutorial commands are available:
 
@@ -11,7 +11,7 @@ From the Snowmass Connect login node, the following tutorial commands are availa
     $ tutorial info <tutorial-name>
     $ tutorial <tutorial-name>
 
-## Available tutorials
+## Available Tutorials
 
 The following tutorials pre-installed. Some additional tutorials specific to Snowmass21 will be deployed there as well. Tutorials that will not work on the Snowmass login node at present are struckthrough. To see what is currently available: 
 
@@ -44,7 +44,7 @@ The following tutorials pre-installed. Some additional tutorials specific to Sno
     ~~stash-http ............. Retrieve job input files from Stash via HTTP~~
     tensorflow-matmul ...... Tensorflow math operations as a singularity container job on the OSG - matrix multiplication
 
-## Install and setup a tutorial
+## Install and Setup a Tutorial
 
 On the Snowmass Connect login node, create a directory, cd to it, and invoke the command:
 
