@@ -13,7 +13,7 @@ From the Snowmass Connect login node, the following tutorial commands are availa
 
 ## Available tutorials
 
-The following tutorials pre-installed. Some additional tutorials specific to Snowmass21 will be deployed there as well. Tutorials that will not work on the Snowmass login node at present are marked  To see what is currently available: 
+The following tutorials pre-installed. Some additional tutorials specific to Snowmass21 will be deployed there as well. Tutorials that will not work on the Snowmass login node at present are struckthrough. To see what is currently available: 
 
     $ tutorial list
     Currently available tutorials:
@@ -40,8 +40,8 @@ The following tutorials pre-installed. Some additional tutorials specific to Sno
     scaling ................ Learn to steer jobs to particular resources
     scaling-up-resources ... A simple multi-job demonstration
     software ............... Software access tutorial
-    ~~stash-cvmfs ............ Shows how to use stash-cvmfs for input data transfer~~
-    ~~stash-http ............. Retrieve job input files from Stash via HTTP~~
+   ~~stash-cvmfs ............ Shows how to use stash-cvmfs for input data transfer ~~
+   ~~stash-http ............. Retrieve job input files from Stash via HTTP~~
     tensorflow-matmul ...... Tensorflow math operations as a singularity container job on the OSG - matrix multiplication
 
 ## Install and setup a tutorial
