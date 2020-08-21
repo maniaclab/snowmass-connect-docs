@@ -131,6 +131,4 @@ A list of HTCondor submission examples to the OSG with instructions for users to
 
 ## Support and Consultation
 
-Snowmass21 Connect is supported by the University of Chicago and Open Science Grid staff. To report issues with the service please submit a ticket to
-[OSG support](support@opensciencegrid.org) and request support from Collaboration Services. Consultation on submitting and running jobs at the OpenScience Grid
-can be requested by emailing: [paschos@uchicago.edu](paschos@uchicago.edu)
+Snowmass21 Connect is supported by the University of Chicago and Open Science Grid staff. To report issues with the service or to request a consultation on submitting and running jobs on the OpenScienceG Grid please submit a ticket to [OSG support](support@opensciencegrid.org).
