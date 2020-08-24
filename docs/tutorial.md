@@ -42,7 +42,7 @@ The following tutorials pre-installed. Some additional tutorials specific to Sno
     software ............... Software access tutorial
     tensorflow-matmul ...... Tensorflow math operations as a singularity container job on the OSG - matrix multiplication
    
-Tutorial `stash-cvmfs` and `stash-http` do not work on the Snowmass Connect Login node at present. We are working to replace with working variants.
+Tutorials `stash-cvmfs` and `stash-http` do not work on the Snowmass Connect Login node at present. We are working to replace with working variants.
 
 
 ## Install and Setup a Tutorial
