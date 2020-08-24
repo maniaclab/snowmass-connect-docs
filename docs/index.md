@@ -90,7 +90,7 @@ You can submit the job script to the OSG via the HTCondor command on the Snowmas
 `condor_submit myjob.submit`, which will return a unique `<JobID>` number. 
 You can use the `<JobID>` to query the status of your job with `condor_q <JobID>`
 
-For an introduction on managing your jobs with HTCondor we refer to [this](https://opensciencegrid.org/user-school-2019/#materials/day1/files/osgus19-day1-part1-intro-to-htc.pdf) presentation by the OSG:
+For an introduction on managing your jobs with HTCondor we refer to [this](https://opensciencegrid.org/user-school-2019/#materials/day1/files/osgus19-day1-part1-intro-to-htc.pdf) presentation by the OSG. You can use also the tutorial command on the Snowmass Login node to access and submit examples to the OSG. A summaryy of the tutorial command is given [here](tutorial.md).
 
 ###  Job Submission Guidelines
 
