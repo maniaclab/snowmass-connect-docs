@@ -128,6 +128,10 @@ for a consultation to discuss if your workflow can benefit from access to a Grid
 
 A list of HTCondor submission examples to the OSG with instructions for users to practice with is included here: [List of Job Examples](examples.md)
 
+## Snowmass Software on the Connect Node
+
+A list of supported software and submission scripts are included [here](software.md)
+
 ## Support and Consultation
 
 Snowmass21 Connect is supported by the University of Chicago and Open Science Grid staff. To report issues with the service or to request a consultation on submitting and running jobs on the OpenScienceG Grid please submit a ticket to <help@opensciencegrid.org>.
