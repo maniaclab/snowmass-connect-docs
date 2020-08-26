@@ -105,7 +105,7 @@ For an introduction on managing your jobs with HTCondor we refer to [this](https
 ## Data Management and Grid Transfer
 
 This section describes recommendations and options for transferring data to the from remote woker nodes as part of a job submission to the OSG.
-As disussed above, you should place their input data for processing on the Open Science Grid in `/collab/user/<user_id>` or `/collab/project/snowmass21`. Data can be transferred to the grid as part of an OSG job using three different methods depending on the file size.
+As disussed above, you should place their input data for processing on the Open Science Grid in `/collab/user/<user_id>` or `/collab/project/snowmass21`. Data can be transferred to the grid as part of an OSG job using four different methods depending on the file size.
 
 1. HTCondor File Transfer. This method is recommended for the majority of computational workflows running on the OSG. Users can employ this method if the total size of the input data per job does not exceed 1 GB. In addition, OSG recommends that the output data per job that need to be transfered back does not exceed 1 GB as well. To enable HTCondor File transfers for your input and output data insert the following parameters anywhere in your HTCondor submit file:
 
@@ -121,8 +121,18 @@ To transfer data back to your collab space from the remote node run the followin
 
         stashcp <output_file> stash:///osgconnect/collab/user/<user_id>/<output_file>
         
-3. If the filesize of each input dataset exceeds 10 GB then an alternative method for transfers is the GridFTP protocol using the gfal-copy tool. Please reach out 
-for a consultation to discuss if your workflow can benefit from access to a GridFTP door.
+3. If the filesize of each input dataset exceeds 10 GB then an alternative method for transfers is the GridFTP protocol using the gfal-copy tool. Please reach out for a consultation to discuss if your workflow can benefit from access to a GridFTP door.
+
+4. Files stored in the shared namespace, `/collab/project/snowmass21` are public and also accessible via HTTP. To access datta there you use linux tools like wget to do as shown in the following example:
+     
+        wget http://stash.osgconnect.net/collab/project/snowmass21/<file_name> 
+
+You can insert such command in your execution script to download datasets on the remote worker node where your job is running. Alternatively, you can 
+declare those files inside your HTCondor submission script as follows:
+ 
+        transfer_input_files = http://stash.osgconnect.net/collab/project/snowmass21/<file_name> 
+        
+HTTP based transfers are best for filesizes up to 1GB.
 
 ## Job Examples to the OSG
 
