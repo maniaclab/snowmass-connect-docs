@@ -134,9 +134,6 @@ declare those files inside your HTCondor submission script as follows:
         
 HTTP based transfers are best for filesizes up to 1GB.
 
-## Job Examples to the OSG
-
-A list of HTCondor submission examples to the OSG with instructions for users to practice with is included here: [List of Job Examples](examples.md)
 
 ## Snowmass Software on the Connect Node
 
