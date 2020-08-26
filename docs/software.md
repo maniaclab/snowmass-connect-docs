@@ -27,5 +27,4 @@ Running Delphes with files accessible via HTTP:
 
     curl http://cp3.irmp.ucl.ac.be/~demin/test.hepmc.gz | gunzip | $delphes_install/DelphesHepMC $delphes_install/cards/delphes_card_CMS.tcl delphes_output.root
 
-## Running ILC
 
