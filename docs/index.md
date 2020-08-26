@@ -123,7 +123,7 @@ To transfer data back to your collab space from the remote node run the followin
         
 3. If the filesize of each input dataset exceeds 10 GB then an alternative method for transfers is the GridFTP protocol using the gfal-copy tool. Please reach out for a consultation to discuss if your workflow can benefit from access to a GridFTP door.
 
-4. Files stored in the shared namespace, `/collab/project/snowmass21` are public and also accessible via HTTP. To access datta there you use linux tools like wget to do as shown in the following example:
+4. Transfers over HTTP. Files stored in the shared namespace, `/collab/project/snowmass21` are public and also accessible via HTTP. To access datta there you can use linux tools like wget as shown in the following example:
      
         wget http://stash.osgconnect.net/collab/project/snowmass21/<file_name> 
 
