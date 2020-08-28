@@ -6,7 +6,7 @@ You can access software on the Snomwass21 Connect node from a) local installatio
 
 Many commonly used software packages and libraries are provided on the OSG through the module command.  OSG modules are made available through the OSG Application Software Installation Service (OASIS).
 
-On the Snowmass21 Connect node use the module avail command to see what software and libraries are available: `module avail`. Use the load command to load a specific module: `module load <name_of_module`. For example, in [here]() we discussed loading the stashcache module `module load stashcache` which allows you to use the stashcp command to transfer data to the grid. 
+On the Snowmass21 Connect node use the module avail command to see what software and libraries are available: `module avail`. Use the load command to load a specific module: `module load <name_of_module`. For example, in [here](#Job-Submissions-to-the-OSG) we discussed loading the stashcache module `module load stashcache` which allows you to use the stashcp command to transfer data to the grid. 
 
 There are two things required in order to use modules in your HTCondor job.
 
