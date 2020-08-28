@@ -1,6 +1,7 @@
-## Software Availability on the Snowmass Connect Node
+## Access to Software
 
-Local installations of software are available on `/collab/project/snowmass21/software`. To access software for jobs on OSG Grid we will be making the locally installed software available over CVMFS from a repository hosted on an Origin at UChicago. Note that additional CVMFS repositories, hosted elsewhere might be needed for jobs to successfully execute.
+You can access software on the Snomwass21 Connect node from a) local installations in `/collab/project/snowmass21/software` b) from CVMFS in commonly used repos in the High Energy Physics community c) the OSG module environment. For applications that need to run on OSG grid only options b) and c) are viable. We have created a new CVMFS repo in /cvmfs/snowmass21.opensciencegrid.org to create of a library of applications specific to the collaboration. Software installed in that repo is made available on remote worker nodes on OSG. 
+
 
 ## Running Delphes
 
