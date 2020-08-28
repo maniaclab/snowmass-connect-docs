@@ -141,4 +141,4 @@ A list of supported software and submission scripts are included [here](software
 
 ## Support and Consultation
 
-Snowmass21 Connect is supported by the University of Chicago and Open Science Grid staff. To report issues with the service or to request a consultation on submitting and running jobs on the OpenScienceG Grid please submit a ticket to <help@opensciencegrid.org>. Additional support is available on the #snowmass-connect channel in the http://snowmass2021.slack.com slack workspace.
+Snowmass21 Connect is supported by the University of Chicago and Open Science Grid staff. To report issues with the service or to request a consultation on submitting and running jobs on the OpenScienceG Grid please submit a ticket to <help@opensciencegrid.org>. Additional support is available on the **#snowmass-connect** channel in the http://snowmass2021.slack.com slack workspace.
