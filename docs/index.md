@@ -97,7 +97,7 @@ For an introduction on managing your jobs with HTCondor we refer to [this](https
 1. If your application/code was built or depends on modules used on the snowmass21 login node and it dynamically links against libraries of the module environment you would need to ensure that these modules are also availablle and loaded on the remote worker node. To do so:
     * Insert the following parameter in your submission script: `Requirements = (HAS_MODULES =?= TRUE)`. This will request a worker node on a site where the OSG modules are available
     * Before you invoke your executable inside the `run.sh` script load the modules as: `module load module1 module2`
-    * We discuss module is a little bit more detail in [here](software.md).
+    * We discuss modules with a little bit more detail in [here](software.md).
   
 2. You must always populate the project name field, e.g. `+ProjectName="snowmass21.energy"`, in your HTCondor submission script to:
     * Ensure your job is validated for HTCondor to run it on the OSG grid
