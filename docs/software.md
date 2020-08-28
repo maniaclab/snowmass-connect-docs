@@ -10,13 +10,11 @@ On the Snowmass21 Connect node use the module avail command to see what software
 
 There are two things required in order to use modules in your HTCondor job.
 
-    Create an execution script for the job. The script should load the needed modules before running the main application.  
+    1. Create an execution script for the job. The script should load the needed modules before running the main application.  
     
-    Include the following requirements in the HTCondor submission script:
-
+    2. Include the following requirements in the HTCondor submission script:
     Requirements = (HAS_MODULES =?= TRUE)
     or 
-
     Requirements = [Other requirements ] && (HAS_MODULES =?= TRUE)
 
 
