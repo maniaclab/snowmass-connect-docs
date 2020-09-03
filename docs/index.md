@@ -55,7 +55,7 @@ does not exist, it will be created. As in `scp` the ssh-keys used for your profi
 must stored on the source machine.
 
 3. **Globus Connect** to transfer files to OSG storage only. A guide on how to gain access to the Globus door and instructions for transfering 
-data to the OSG storage can be found here: [Globus Connect instructions](globus.md)
+data to the OSG storage can be found here: [Uploading Data Instructions](globus.md)
 
  
 ## Job Submissions to the OSG
