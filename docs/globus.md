@@ -1,4 +1,4 @@
-# Globus Connect Instructions
+# Uploading data Instructions
 
 The purpose of this documentation is to provide instructions to users in using Globus Connect to move data into their directory on OSG Storage.
 Instructions on how to set up Globus Connect Personal can be found 
