@@ -1,6 +1,6 @@
 ## Access to Software
 
-You can access software on the Snomwass21 Connect node from a) local installations in `/collab/project/snowmass21/software` b) from CVMFS in commonly used repos for the High Energy Physics community c) the OSG module environment. For applications that need to run on OSG grid, only options b) and c) are viable. We have created a new CVMFS repo in /cvmfs/snowmass21.opensciencegrid.org to create a library of applications specific to the collaboration. Software installed in that repo is made available on remote worker nodes on OSG. 
+You can access software on the Snomwass21 Connect node from a) local installations in `/local-scratch/software` b) from CVMFS in commonly used repos for the High Energy Physics community c) the OSG module environment. For applications that need to run on OSG grid, only options b) and c) are viable. We have created a new CVMFS repo in /cvmfs/snowmass21.opensciencegrid.org to create a library of applications specific to the collaboration. Software installed in that repo is made available on remote worker nodes on OSG. 
 
 ## The OSG Module Environment
 
@@ -20,7 +20,7 @@ There are two things required in order to use modules in your HTCondor job.
 
 ## Running Delphes
 
-For local calculations on the Snowmass Connect node, Delphes is installed in `/collab/project/snowmass21/software/Delphes-3.4.2`. You must first execute the following setup script: `source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh` before using the executables. For jobs on OSG, Delphes is installed in `/cvmfs/snowmass21.opensciencegrid.org/software/Delphes-3.4.2`. To run the software as part of job submitted to OSG
+For local calculations on the Snowmass Connect node, Delphes is installed in `/local-scratch/software/Delphes-3.4.2`. You must first execute the following setup script: `source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh` before using the executables. For jobs on OSG, Delphes is installed in `/cvmfs/snowmass21.opensciencegrid.org/software/Delphes-3.4.2`. To run the software as part of job submitted to OSG
 add the following in your execution script:
 
     #congifure ROOT/gcc environment
@@ -44,3 +44,39 @@ Running Delphes with files accessible via HTTP:
     curl http://cp3.irmp.ucl.ac.be/~demin/test.hepmc.gz | gunzip | $delphes_install/DelphesHepMC $delphes_install/cards/delphes_card_CMS.tcl delphes_output.root
 
 
+## Running Whizard
+
+Whizard is installed on the snowmass21 submit node in /local-scratch/software/ee_gg. You must set up your environment before by running the following on the submit node: 
+
+        module use /local-scratch/software/modulefiles/
+        module load gcc-8.2.0 
+        export LD_LIBRARY_PATH=/local-scratch/software/ee_gen/./packages/OpenLoops/lib:$LD_LIBRARY_PATH
+        export PATH=local-scratch/software/ee_gen/bin:$PATH 
+        
+Examples are contained in this directory: /local-scratch/software/ee_gen/share/whizard/examples. The whizard executable will be in your $PATH. You can run an example from your home directory as: 
+    
+        whizard /local-scratch/software/ee_gen/share/whizard/examples/LEP_cc10.sin
+        
+Whizard is also available over cvmfs in /cvmfs/snowmass21.opensciencegrid.org/ee_gg. To run on the grid, ensure that your submit script has `Requirements = (HAS_MODULES =?= TRUE)`. You must also source the setup script in /cvmfs/snowmass21.opensciencegrid.org/ee_gg/setup.sh which will set up your environment. An example of an OSG job submission for whizard is inlined below:
+
+Submit script:
+
+        Universe = Vanilla
+        Executable     = run.sh
+        Requirements = (HAS_CVMFS =?= TRUE) && (OSGVO_OS_STRING == "RHEL 7) && (HAS_MODULES =?= TRUE) 
+        Error   = output.err.$(Cluster)-$(Process)
+        Output  = output.out.$(Cluster)-$(Process)
+        Log     = output.log.$(Cluster)
+        should_transfer_files = YES
+        WhenToTransferOutput = ON_EXIT
+        request_cpus = 1
+        request_memory = 1 GB
+        +ProjectName="snowmass21.energy"
+        Queue 1
+        
+Execution script (run.sh from the submit script above):
+
+        #!/bin/bash
+        source /cvmfs/snowmass21.opensciencegrid.org/ee_gg/setup.sh
+        whizard /cvmfs/snowmass21.opensciencegrid.org//ee_gen/share/whizard/examples/LEP_cc10.sin
+        
