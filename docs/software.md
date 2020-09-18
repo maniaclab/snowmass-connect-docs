@@ -51,7 +51,7 @@ Whizard is installed on the snowmass21 submit node in /local-scratch/software/ee
         module use /local-scratch/software/modulefiles/
         module load gcc-8.2.0 
         export LD_LIBRARY_PATH=/local-scratch/software/ee_gen/./packages/OpenLoops/lib:$LD_LIBRARY_PATH
-        export PATH=local-scratch/software/ee_gen/bin:$PATH 
+        export PATH=/local-scratch/software/ee_gen/bin:$PATH 
         
 Examples are contained in this directory: /local-scratch/software/ee_gen/share/whizard/examples. The whizard executable will be in your $PATH. You can run an example from your home directory as: 
     
