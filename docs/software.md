@@ -44,7 +44,7 @@ Running Delphes with files accessible via HTTP:
 
 ### Delphes on the OSG
 
-For jobs on OSG, we recommend users use the singularity container image hosted /cvmfs/singularity.opensciencegrid.org/snowmass21software/delphes-osg:latest. The image contains the full installation of the software which includes the examplles folder. The following example is a submission script which will request the availability of Singularity as a requirement on the remote node and loads the image for your job. 
+For jobs on OSG, it recommended you use the singularity container image hosted `/cvmfs/singularity.opensciencegrid.org/snowmass21software/delphes-osg:latest`. The image contains the full installation of the software which includes the examplles folder. The following example is a submission script which will request the availability of Singularity as a requirement on the remote worker node and loads the image for your job. 
 
     Universe = Vanilla
     Executable     = run.sh
@@ -64,14 +64,9 @@ The executable script, run.sh, contains the HTTP  listed above for local jobs.
 
     #!/bin/bash
 
-    curl http://cp3.irmp.ucl.ac.be/~demin/test.hepmc.gz | gunzip | singularity exec /cvmfs/singularity.opensciencegrid.org/snowmass21software/delphes-osg:latest        DelphesHepMC /opt/Delphes-3.4.2/cards/delphes_card_CMS.tcl ~/delphes_output.root
+    curl http://cp3.irmp.ucl.ac.be/~demin/test.hepmc.gz | gunzip | DelphesHepMC /opt/Delphes-3.4.2/cards/delphes_card_CMS.tcl ~/delphes_output.root
 
-add the following in your execution script:
-
-    #congifure ROOT/gcc environment
-    source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh
-    export delphes_install=/cvmfs/snowmass21.opensciencegrid.org/software/Delphes-3.4.2
-
+There is no need to source any external environment and all Delphes executables have been added to $PATH as part of the image. 
 
 ## Running Whizard
 
