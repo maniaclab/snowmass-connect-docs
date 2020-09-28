@@ -20,7 +20,7 @@ There are two things required in order to use modules in your HTCondor job.
 
 ## Running Delphes
 
-### On snowmass21 login node
+### Snowmass21 login node (local)
 
 For local calculations on the Snowmass Connect node, Delphes is installed in `/local-scratch/software/Delphes-3.4.2`. You must first execute the following setup script: `source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh` before using the executables. For jobs on OSG, Delphes is installed in `/cvmfs/snowmass21.opensciencegrid.org/software/Delphes-3.4.2`. For the following examples, we would export the installation path as:
 
@@ -44,13 +44,7 @@ Running Delphes with files accessible via HTTP:
 
 ### Delphes on the OSG
 
-For jobs on OSG, Delphes is installed in `/cvmfs/snowmass21.opensciencegrid.org/software/Delphes-3.4.2`. To run the software as part of job submitted to OSG
-add the following in your execution script:
-
-    #congifure ROOT/gcc environment
-    source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh
-    export delphes_install=/cvmfs/snowmass21.opensciencegrid.org/software/Delphes-3.4.2
-
+For jobs on OSG, we recommend users use the singularity container image hosted /cvmfs/singularity.opensciencegrid.org/snowmass21software/delphes-osg:latest. The image contains the full installation of the software which includes the examplles folder. The following example is a submission script which will request the availability of Singularity as a requirement on the remote node and loads the image for your job. 
 
     Universe = Vanilla
     Executable     = run.sh
@@ -65,10 +59,18 @@ add the following in your execution script:
     request_memory = 1 GB
     +ProjectName="snowmass21.energy"
     Queue 1     
-    
+
+The executable script, run.sh, contains the HTTP  listed above for local jobs. 
+
     #!/bin/bash
 
     curl http://cp3.irmp.ucl.ac.be/~demin/test.hepmc.gz | gunzip | singularity exec /cvmfs/singularity.opensciencegrid.org/snowmass21software/delphes-osg:latest        DelphesHepMC /opt/Delphes-3.4.2/cards/delphes_card_CMS.tcl ~/delphes_output.root
+
+add the following in your execution script:
+
+    #congifure ROOT/gcc environment
+    source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh
+    export delphes_install=/cvmfs/snowmass21.opensciencegrid.org/software/Delphes-3.4.2
 
 
 ## Running Whizard
