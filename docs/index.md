@@ -32,7 +32,7 @@ nodes where the module environment is available, discussed in the [Job submissio
 
 ## Storage Access
 
-This section describes the storage locations accessible by the users on the on when connected to Snowmass login node. It also describes the means by which
+This section describes the storage locations accessible by the users when connected to Snowmass login node. It also describes the means by which
 users can move data in from their home institutions.
 
 1. Home directory. As mentioned above, your home directory will have 50GB of storage  available and can
