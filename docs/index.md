@@ -42,6 +42,8 @@ be used for scripts, submission files and small size data. Large input files for
     * For shared data among the members of the Snowmass21 collaboration:`/collab/project/snowmass21`
 3. Local storage in`/scratch`. You can access that storage location for storing workflows, data and job submission scripts.
 
+For details on Data Management on the Snowmass21 login refer to [this](data_management.md) section.
+
  
 ## Job Submissions to the OSG
 
