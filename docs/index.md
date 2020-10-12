@@ -91,7 +91,7 @@ For an introduction on managing your jobs with HTCondor we refer to [this](https
     * Job statistics are properly collected and displayed on the [OSG monitoring dashboard](https://bit.ly/3j36bAc) for the snowmass project.
 
 
-## Snowmass Software on the Connect Node
+## Access to Software
 
 A list of supported software and submission scripts are included [here](software.md)
 
