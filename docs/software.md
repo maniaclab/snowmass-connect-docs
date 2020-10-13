@@ -27,8 +27,10 @@ For local calculations on the Snowmass Connect node, Delphes is installed in `/l
 Export the installation path and adjust the LD_LIBRARY_PATH of the supporting libraries as:
 
     export delphes_install=/local-scratch/software/Delphes-3.4.2
+    module use /local-scratch/software/modulefiles/
+    module load gcc-8.2.0
     export LD_LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/lib:$LD_LIBRARY_PATH
-    export PATH=/local-scratch/software/Delphes-3.4.2:$PATH
+    export PATH=$delphes_install:$PATH
     
 Running Delphes with HepMC input files:
  
