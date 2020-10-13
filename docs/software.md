@@ -74,6 +74,8 @@ There is no need to source any external environment and all Delphes executables 
 
 ## Running Whizard
 
+### Snowmass21 login node (local)
+
 Whizard is installed on the snowmass21 submit node in /local-scratch/software/ee_gg. You must set up your environment before by running the following on the submit node: 
 
         module use /local-scratch/software/modulefiles/
@@ -84,7 +86,9 @@ Whizard is installed on the snowmass21 submit node in /local-scratch/software/ee
 Examples are contained in this directory: /local-scratch/software/ee_gen/share/whizard/examples. The whizard executable will be in your $PATH. You can run an example from your home directory as: 
     
         whizard /local-scratch/software/ee_gen/share/whizard/examples/LEP_cc10.sin
-        
+
+### Whizzard on the OSG
+
 Whizard is also available over cvmfs in /cvmfs/snowmass21.opensciencegrid.org/ee_gg. To run on the grid, ensure that your submit script has `Requirements = (HAS_MODULES =?= TRUE)`. You must also source the setup script in /cvmfs/snowmass21.opensciencegrid.org/ee_gg/setup.sh which will set up your environment. An example of an OSG job submission for whizard is inlined below:
 
 Submit script:
