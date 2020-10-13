@@ -22,23 +22,27 @@ There are two things required in order to use modules in your HTCondor job.
 
 ### Snowmass21 login node (local)
 
-For local calculations on the Snowmass Connect node, Delphes is installed in `/local-scratch/software/Delphes-3.4.2`. You must first execute the following setup script: `source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh` before using the executables. For jobs on OSG, Delphes is installed in `/cvmfs/snowmass21.opensciencegrid.org/software/Delphes-3.4.2`. For the following examples, we would export the installation path as:
+For local calculations on the Snowmass Connect node, Delphes is installed in `/local-scratch/software/Delphes-3.4.2`. You must first execute the following setup script: `source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh` before using the executables. 
 
-    export delphes_install=/cvmfs/snowmass21.opensciencegrid.org/software/Delphes-3.4.2
+Export the installation path and adjust the LD_LIBRARY_PATH of the supporting libraries as:
+
+    export delphes_install=/local-scratch/software/Delphes-3.4.2
+    export LD_LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/lib:$LD_LIBRARY_PATH
+    export PATH=/local-scratch/software/Delphes-3.4.2:$PATH
     
 Running Delphes with HepMC input files:
  
-    $delphes_install/DelphesHepMC $delphes_install/cards/delphes/card_CMS.tcl delphes_output.root input.hep
+    $delphes_install/DelphesHepMC $delphes_install/cards/delphes/card_CMS.tcl delphes_output.root <input.hepmc>
 
 Running Delphes with STDHEP (XDR) input files:
     
-    $delphes_install DelphesSTDHEP $delphes_install/cards/delphes/delphes_card_CMS.tcl delphes_output.root input.hep   
+    $delphes_install DelphesSTDHEP $delphes_install/cards/delphes/delphes_card_CMS.tcl delphes_output.root <input.hep>   
 
 Running Delphes with LHEF input files:
       
-     $delphes_install/DelphesLHEF $delphes_install/cards/delphes/delphes_card_CMS.tcl delphes_output.root input.lhef
+     $delphes_install/DelphesLHEF $delphes_install/cards/delphes/delphes_card_CMS.tcl delphes_output.root <input.lhef>
 
-Running Delphes with files accessible via HTTP:
+Running Delphes with files accessible via HTTP. The following example downloads a test HepMC input file and runs the executable. 
 
     curl http://cp3.irmp.ucl.ac.be/~demin/test.hepmc.gz | gunzip | $delphes_install/DelphesHepMC $delphes_install/cards/delphes_card_CMS.tcl delphes_output.root
 
