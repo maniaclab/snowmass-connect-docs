@@ -20,7 +20,9 @@ Information **here** describes:
 
 ## Job Submissions to the OSG
 
-Information **here** provides an introduction on how to submit jobs to the OSG from the Snowmass21 Connect node. Additional infomation is provided in the software section.
+Information **here** provides an introduction on how to submit jobs to the OSG from the Snowmass21 Connect node. Addittional software-specific examples are included in the [software](##Access_to_Software)
+
+ [link](#head1234)
 
 ## Data Management on the Snowmass21 Connect node
 
