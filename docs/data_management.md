@@ -1,6 +1,5 @@
 ## Data Management
 
-
 This section describes recommendations and options for transferring data to the from remote woker nodes a s part of a job submission to the OSG.
 
 ### Transferring data to and from the Snowmass21 login node
