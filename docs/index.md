@@ -12,7 +12,7 @@ The Snowmass21 Connect service consists of the following components:
   
 ## Access the Snowmass21 Connect node
 
-Information **here** describes:
+Information [here](accounting.md) describes:
 
 1. How to obtain an account on the Snowmass21 Connect node
 2. How to manage that account  
