@@ -22,9 +22,9 @@ This section provides information on:
 
 This section provides an introduction on how to submit jobs to the OSG from the Snowmass21 Connect node. Addittional software-specific examples are included in the [software](#Access-to-Software) section.
 
-## Data Management on the Snowmass21 Connect node
+## [Data Management on the Snowmass21 Connect node](data_management_main.md)
 
-Information **here** describes:
+This section provides information on:
 
 1. Storage locations available to the user
 2. How to transfer files to and from the Snowmass21 Connect node
