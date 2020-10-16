@@ -28,7 +28,7 @@ This section provides information on:
 
 1. Storage locations available to the user
 2. How to transfer files to and from the Snowmass21 Connect node
-3. The methods of making files available on the Grid for jobs
+3. Methods of making files available to the grid for jobs
                    
 ## Access to Software
 
