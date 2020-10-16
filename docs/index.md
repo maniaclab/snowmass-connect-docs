@@ -1,6 +1,6 @@
 # Overview
 
-The purpose of this site is to facilitate researchers in the use of the Snowmass21 Connect service in support of the [Snowmass21 effort](https://snowmass21.org/). The information included here describes the means for the users in accessing the Snowmass21 Connect resource, the installed software, management of data and to provide material on running jobs on the Open Science Grid (OSG). 
+The purpose of this site is to facilitate researchers in the use of the Snowmass21 Connect service in support of the [Snowmass21 effort](https://snowmass21.org/). The information included here describes the means for the users in accessing the Snowmass21 Connect resource, the installed software, management of data and to provide material on running jobs on the Open Science Grid (OSG) (https://opensciencegrid.org/)
 
 The Snowmass21 Connect service consists of the following components:
 
