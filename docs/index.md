@@ -18,9 +18,9 @@ This section provides information on:
 2. How to manage that account  
 3. How to login to the resource
 
-## Job Submissions to the OSG
+## [Job Submissions to the OSG](job_submission.md)
 
-Information **here** provides an introduction on how to submit jobs to the OSG from the Snowmass21 Connect node. Addittional software-specific examples are included in the [software](#Access-to-Software) section.
+This section provides an introduction on how to submit jobs to the OSG from the Snowmass21 Connect node. Addittional software-specific examples are included in the [software](#Access-to-Software) section.
 
 ## Data Management on the Snowmass21 Connect node
 
