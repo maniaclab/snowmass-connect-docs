@@ -1,8 +1,8 @@
-# Site Description
+# Service Description
 
-The purpose of this site is to facilitate researchers in the use of the Snowmass21 Connect service in support of the [Snowmass21 effort](https://snowmass21.org/). The information included describes the means of accessing the Snowmass21 Connect resource, the installed software, management of data and to provide material on running jobs on the Open Science Grid (OSG). 
+The purpose of this site is to facilitate researchers in the use of the Snowmass21 Connect service in support of the [Snowmass21 effort](https://snowmass21.org/). The information included here describes the means for the users in accessing the Snowmass21 Connect resource, the installed software, management of data and to provide material on running jobs on the Open Science Grid (OSG). 
 
-The Snowmass21 Connect service consists of the following parts:
+The Snowmass21 Connect service consists of the following components:
 
 1. Provide users a gateway to the Open Science Grid. Users can submit jobs to the OSG in order to run and scale computational workflows acroos the nationally distributed High ThroughPut Computing resource.
 2. Provide access to storage where users can stage input files and collect output from their jobs
@@ -12,7 +12,11 @@ The Snowmass21 Connect service consists of the following parts:
   
 ## Access the Snowmass21 Connect node
 
-Information **here** describes the process of acquiring an account on the Snowmass21 Connect node, how to manage that account and how to login to the resource.
+Information **here** describes:
+
+1. How to obtain an account on the Snowmass21 Connect node
+2. How to manage that account  
+3. How to login to the resource
 
 ## Job Submissions to the OSG
 
@@ -22,7 +26,7 @@ Information **here** provides an introduction on how to submit jobs to the OSG f
 
 Information **here** describes:
 
-1. The various storage endpoints available to the user
+1. Storage locations available to the user
 2. How to transfer files to and from the Snowmass21 Connect node
 3. The methods of making files available on the Grid for jobs
                    
