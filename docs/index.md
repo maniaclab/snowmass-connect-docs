@@ -10,7 +10,7 @@ The Snowmass21 Connect service consists of the following components:
 4. Provide access to installed software and the means to make them available on the grid.
 5. Provide a local computing platform for non-grid interactive jobs to either test code or analyse data. 
   
-## Access the Snowmass21 Connect node
+## [Access the Snowmass21 Connect node](accounting.md)
 
 Information [here](accounting.md) describes:
 
