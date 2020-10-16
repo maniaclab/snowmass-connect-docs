@@ -30,9 +30,9 @@ This section provides information on:
 2. How to transfer files to and from the Snowmass21 Connect node
 3. Methods of making files available to the grid for jobs
                    
-## Access to Software
+## [Access to Software](software.md)
 
-Information **here** provides the means to access software from the Snowmass21 Connect node. Software includes common scientific packages and applications spefically installed in support of the the Snowmass21 effort. Provided also are the means to execute installed software either locally on the node or as part of a job submission to the OSG.
+This section provides information on how to access software on the Snowmass21 Connect node. It includes information on the OSG module environment and a guidance on  running installed software in support of the the Snowmass21 effort - organized between local jobs on the node and jobs on the grid where available.
 
 ## Support and Consultation
 
