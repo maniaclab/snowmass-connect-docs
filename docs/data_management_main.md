@@ -1,35 +1,32 @@
 # Data Management
 
-This section describes recommendations and options for transferring data to the from remote woker nodes a s part of a job submission to the OSG.
+This section provides important information on how the users can manage their data on the Snowmass21 node.
 
-## Storage Access
+## Storage locations on the Snowmass21 node
 
-This section describes the storage locations accessible by the users when connected to Snowmass login node. It also describes the means by which
-users can move data in from their home institutions.
+This section describes the storage locations accessible by the users when connected to Snowmass login node.
 
-1. Home directory. As mentioned above, your home directory will have 50GB of storage  available and can
-be used for scripts, submission files and small size data. Large input files for jobs on the grid should not be stored here.
-2. OSG storage accebible from the login node at `/collab`. You will receive a 1TB quota for their personal user space, and there is a shared 50TB quota for the project space. Larger space allocations can be accommodated on a case-by-case basis. You should store their data in either of two subdirectories:  
+1. **Home** directory. Your home directory, `/home/<user_id>`, has 50GB of storage available. It is recommended to use it for storing scripts, 
+submission files and small size data. Large input files for jobs on the grid should not be stored here.
+2. **Local storage** in`/local-scratch`. This is a 200TB local disk where you can create your own directory, store data and build your own software stack. It should be used as your private work area for local analysis or processing jobs on the node. 
+3. **Stash storage** is accebible from the login node at `/collab`. Each user receives a 1TB quota for their personal user space. There is also a shared 50TB allocation for the project. This location is primarily intented for staging data that need to be accessible by the OSG compute sites running your job. There two subdirectories in `/collab`:  
     * For private user data: `/collab/user/<user_id>`  
-    * For shared data among the members of the Snowmass21 collaboration:`/collab/project/snowmass21`
-3. Local storage in`/scratch`. You can access that storage location for storing workflows, data and job submission scripts.
-
-For details on Data Management on the Snowmass21 login refer to [this](data_management.md) section.
+    * For shared data among the members of the Snowmass21 project:`/collab/project/snowmass21/data`
 
 
 ## Transferring data to and from the Snowmass21 login node
 You can transfer data from external institutions to Snowmass Connect storage using any of the three following methods:
 
 1. **scp**. For example: `scp -r <file_or_directory> <user_id>@login.snowmass.io:/collab/user/<user_id>/.` will copy a file or a directory
-from your local machine to your user directory on the OSG storage. The ssh-keys used for your profile on the Snowmass Connect portal
+from your local machine to your user directory on stash storage. The ssh-keys used for your profile on the Snowmass Connect portal
 must stored on the local machine.
 
 2. **rsync**. For example: `rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress test.transfer <user_id>@login.snowmass21.io:dump/` will copy the `test.transfer` file in the `/home/<user_id>/dump/` directory. If the directory
 does not exist, it will be created. As in `scp` the ssh-keys used for your profile on the Snowmass Connect portal
 must stored on the source machine.
 
-3. **Globus Connect** to transfer files to OSG storage only. A guide on how to gain access to the Globus door and instructions for transfering
-data to the OSG storage can be found here: [Uploading Data Instructions](globus.md)
+3. **Globus Connect** can be used to transfer files to stash storage only. A guide on how to gain access to the Globus door and instructions for transfering
+data to the stash storage can be found here: [Uploading Data Instructions](globus.md)
 
 
 ## Data Management for OSG jobs
