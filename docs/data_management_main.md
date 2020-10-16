@@ -29,17 +29,19 @@ must stored on the source machine.
 data to the stash storage can be found here: [Uploading Data Instructions](globus.md)
 
 
-## Data Management for OSG jobs
+## Data for OSG jobs
 
-As disussed above, you should place their input data for processing on the Open Science Grid in `/collab/user/<user_id>` or 
-`/collab/project/snowmass21`. Data can be transferred to the grid as part of an OSG job using four different methods depending on the file size.
+There are four methods for the user to make data available to remote sites running their jobs.
 
 1. HTCondor File Transfer. This method is recommended for the majority of computational workflows running on the OSG. Users can employ this method if the total size of the input data per job does not exceed 1 GB. In addition, OSG recommends that the output data per job that need to be transfered back does not exceed 1 GB as well. To enable HTCondor File transfers for your input and output data insert the following parameters anywhere in your HTCondor submit file:
 
         transfer_input_files = <comma separated files or directories>
         transfer_output_files = <comma separated files or directories>
 
-2. OSG's StashCache. This method is recommended for input files larger than 1 GB each or 10 GB total from all input data. The recommended upper limit for the output files to be transfered back from the remote node is 10 GB per job. Users can use the stashcp tool to transfer data from their `/collab` space only to the remote host. You can insert the following command in your execution script to transfer data from `/collab/user/<user_id>` to the local
+This method can leverage any storage location on the Snowmass21 Connect node. However it is recommended that you primarily use `/local-scratch` and avoid the `/home/<user_id>` directory.
+
+2. OSG's StashCache. To use this service, data should placed either in `/collab/user/<user_id>` or 
+`/collab/project/snowmass21`. This method is recommended for input files larger than 1 GB each or 10 GB total from all input data. The recommended upper limit for the output files to be transfered back from the remote node is 10 GB per job. Users can use the stashcp tool to transfer data from their `/collab` space only to the remote host. You can insert the following command in your execution script to transfer data from `/collab/user/<user_id>` to the local
 directory on the remote worker node where your job is running:
 
         module load stashcache
