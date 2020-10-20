@@ -33,12 +33,9 @@ You can search for the collection by name in the search bar of the File Manager.
 In order to access the stash storage on the Connect node via Globus online, you must have an institutional 
 based grid certificate issued by CILogon. To obtain one follow the steps below:
 
-1. Logon with your institutional credentials at [http://cilogon.org](http://cilogon.org)
-2. Select "Create a Password Protected Certificate". Enter a password and download your encrypted certificate, named usercred.p12. 
-The certificate can be obtained 
-by using the openssl pcks12 command as: `openssl pkcs12 -in [your-cert-file] -clcerts -nokeys -out usercert.pem`
-3. Email to [paschos@uchicago.edu](paschos@uchicago.edu) the output of the following command which will print out your 
-DN (Distinguish Name): `openssl x509 -in usercert.pem -noout -subject`
+      1. Logon with your institutional credentials at [http://cilogon.org](http://cilogon.org)
+      2. Select "Create a Password Protected Certificate". Enter a password and download your encrypted certificate, named usercred.p12. The certificate can be obtained by using the openssl pcks12 command as: `openssl pkcs12 -in [your-cert-file] -clcerts -nokeys -out usercert.pem`
+      3. Email to [paschos@uchicago.edu](paschos@uchicago.edu) the output of the following command which will print out your DN (Distinguish Name): `openssl x509 -in usercert.pem -noout -subject`
 
 Once your DN has been entered in the user access list you will be able to access the OSG Connect CI Logon collection with the Globus Connect client by 
 validating with your institution credentials. Navigate to the OSG Snowmass21 Collaborations Connect storage by typing in the Path box `/stash/collab`. You can then navigate to your user directory as shown in the example below:
@@ -47,8 +44,8 @@ validating with your institution credentials. Navigate to the OSG Snowmass21 Col
 
 Shown in the image above are two possible destinations for the data.
 
-a. Navigate to `/cephfs/osg/collab/project/snowmass21` if data are to be shared by multiple users.
-b. Navigate to `/cephfs/osg/user/<user_id>` if data are for the exclusive use of a single user.
+* Navigate to `/cephfs/osg/collab/project/snowmass21` if data are to be shared by multiple users.
+* Navigate to `/cephfs/osg/user/<user_id>` if data are for the exclusive use of a single user.
 In both cases, users can create subdirectories and organize content by either using the Globus client interface or from the login.snowmass21.io node.
 
 On the right panel of the Globus Connect client tool you can search and connect to another collection. 
