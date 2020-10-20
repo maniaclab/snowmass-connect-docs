@@ -37,7 +37,7 @@ This section provides information on how to access software on the Snowmass21 Co
 
 The Snowmass21 Connect service is supported by the University of Chicago and the Open Science Grid. To report issues with the service or to request a consultation on submitting and running jobs on the OpenScienceG Grid please submit a ticket to <help@opensciencegrid.org>. Additional support is available in the **#snowmass-connect** channel at http://snowmass2021.slack.com.
 
-![Alt](snowmass2021_logo.png) 
-![Alt](snowmass-connect-logo.png)
+![Alt](snowmass2021_logo.png =250x) 
+![Alt](snowmass-connect-logo.png =250x)
 
 
