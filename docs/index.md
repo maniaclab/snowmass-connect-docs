@@ -3,11 +3,11 @@
 The purpose of this site is to facilitate researchers in the use of the Snowmass21 Connect service in support of the [Snowmass21 effort](https://snowmass21.org/).
 As a user you have access to the following services:
 
-* A gateway to the Open Science Grid. You can submit jobs to the OSG in order to run and scale computational workflows acroos the nationally distributed High ThroughPut Computing resource.
-* Access to storage. You can stage input files and collect output from your jobs
-* An environment for the development of Open Science Grid (OSG) (https://opensciencegrid.org/) appropriate workflows
+* A gateway to the Open Science Grid (OSG) (https://opensciencegrid.org/). You can submit jobs to the OSG in order to run and scale computational workflows acroos the nationally distributed High ThroughPut Computing resource.
+* Access to storage. You can stage input files and collect output from your jobs.
+* An environment for the development of OSG appropriate workflows.
 * Access to installed software and the means to make them available on the grid.
-* A local computing platform for non-grid interactive jobs to either test code or analyse data. 
+* A local computing platform for non-grid interactive jobs to either test code or analyse data.
   
 ## [Access the Connect node](accounting.md)
 
