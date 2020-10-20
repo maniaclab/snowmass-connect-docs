@@ -1,8 +1,8 @@
 # Data Management
 
-This section provides important information on how the users can manage their data on the Snowmass21 node.
+This section provides important information on how you can manage their data on the Snowmass21 node.
 
-## Storage locations on the Snowmass21 node
+## Storage locations on Connect node
 
 This section describes the storage locations accessible by the users when connected to Snowmass login node.
 
@@ -14,8 +14,8 @@ submission files and small size data. Large input files for jobs on the grid sho
     * For shared data among the members of the Snowmass21 project:`/collab/project/snowmass21/data`
 
 
-## Transferring data to and from the Snowmass21 login node
-You can transfer data from external institutions to Snowmass Connect storage using any of the three following methods:
+## Transferring data 
+You can transfer data from external institutions to the Snowmass21 Connect using any of the three following methods:
 
 1. **scp**. For example: `scp -r <file_or_directory> <user_id>@login.snowmass.io:/collab/user/<user_id>/.` will copy a file or a directory
 from your local machine to your user directory on stash storage. The ssh-keys used for your profile on the Snowmass Connect portal
@@ -25,11 +25,10 @@ must stored on the local machine.
 does not exist, it will be created. As in `scp` the ssh-keys used for your profile on the Snowmass Connect portal
 must stored on the source machine.
 
-3. **Globus Connect** can be used to transfer files to stash storage only. A guide on how to gain access to the Globus door and instructions for transfering
-data to the stash storage can be found here: [Uploading Data Instructions](globus.md)
+3. **Globus Connect** can be used to transfer files to stash storage only. A guide on how to gain access to the Globus door and instructions for transfering data to the stash storage can be found here: [Uploading Data Instructions](globus.md)
 
 
-## Data for OSG jobs
+## Data for grid jobs
 
 There are four methods for the user to make data available to remote sites running their jobs.
 
@@ -40,7 +39,7 @@ There are four methods for the user to make data available to remote sites runni
 
 This method can leverage any storage location on the Snowmass21 Connect node. However it is recommended that you primarily use `/local-scratch` and avoid the `/home/<user_id>` directory.
 
-2. OSG's StashCache. To use this service, data should placed either in `/collab/user/<user_id>` or 
+2. OSG's StashCache. To use this service, data should be placed either in `/collab/user/<user_id>` or 
 `/collab/project/snowmass21`. This method is recommended for input files larger than 1 GB each or 10 GB total from all input data. The recommended upper limit for the output files to be transfered back from the remote node is 10 GB per job. Users can use the stashcp tool to transfer data from their `/collab` space only to the remote host. You can insert the following command in your execution script to transfer data from `/collab/user/<user_id>` to the local
 directory on the remote worker node where your job is running:
 
