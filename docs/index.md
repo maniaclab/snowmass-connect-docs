@@ -1,6 +1,6 @@
 # Overview
 
-The purpose of this site is to facilitate researchers in the use of the Snowmass21 Connect service in support of the [Snowmass21 effort](https://snowmass21.org/). The information included here describes the means for the users in accessing the Snowmass21 Connect resource, the installed software, management of data and to provide material on running jobs on the Open Science Grid (OSG) (https://opensciencegrid.org/)
+The purpose of this site is to facilitate researchers in the use of the Snowmass21 Connect service in support of the [Snowmass21 effort](https://snowmass21.org/). The information included here describes the means for the users services on the resource such as the installed software, information on data management and material on running jobs on the Open Science Grid (OSG) (https://opensciencegrid.org/)
 
 As a user you have access to the following services:
 1. A gateway to the Open Science Grid. You can submit jobs to the OSG in order to run and scale computational workflows acroos the nationally distributed High ThroughPut Computing resource.
@@ -13,7 +13,7 @@ As a user you have access to the following services:
 
 This section provides information on:
 
-1. How to obtain an account on the Snowmass21 Connect node
+1. How to obtain an account on the Connect node
 2. How to manage that account  
 3. How to login to the resource
 
