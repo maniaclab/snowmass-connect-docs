@@ -14,7 +14,7 @@ As a user you have access to the following services:
 
 This section provides information on:
 
-1. How to obtain an account
+1. [How to obtain an account](acounting.md)
 2. How to login to the resource
 3. How to manage that account  
 
