@@ -1,4 +1,4 @@
-# Access the Snowmass21 Connect node 
+# Access the Connect node 
 
 ## Obtain an account
 
