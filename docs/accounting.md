@@ -16,11 +16,6 @@ In order to submit jobs to the OSG you should also follow up - once your account
 subgroup: snowmass21.energy or snowmass21.cosmic. An email back will confirm your addition to your requested subgroup project. To do that navigate to the groups 
 section in the portal here: [https://snowmass21.ci-connect.net/groups](https://snowmass21.ci-connect.net/groups) and select a particular subgroup to join.
 
-## Manage your account
-
-You can come back to the portal if you need to change your institutional affiliation, email, join another subgroup or upload additional ssh-keys to your account. Account management is 
-controlled by an automated process which will only make ssh-keys persistent in your user account if they are uploaded through the portal. 
-
 ## Login to the Submit Node
 
 Once you upload your ssh-keys in the Snowmass21 Connect portal and your account request has been processed and approved, it takes a few minutes for your home directory 
@@ -38,3 +33,8 @@ If you need an interactive environment to support export of graphics back to you
 `ssh -X <user_id>@login.snowmass21.io` 
 
 You would also need to make your terminal X11 compatible. For machines running MacOS a useful tool can be found [here](https://www.xquartz.org/)
+
+## Manage your account
+
+You can come back to the portal if you need to change your institutional affiliation, email, join another subgroup or upload additional ssh-keys to your account. Account management is 
+controlled by an automated process which will only make ssh-keys persistent in your user account if they are uploaded through the portal. 
