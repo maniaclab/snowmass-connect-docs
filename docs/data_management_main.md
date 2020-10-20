@@ -33,9 +33,9 @@ You can search for the collection by name in the search bar of the File Manager.
 In order to access the stash storage on the Connect node via Globus online, you must have an institutional 
 based grid certificate issued by CILogon. To obtain one follow the steps below:
 
-      1. Logon with your institutional credentials at [http://cilogon.org](http://cilogon.org)
-      2. Select "Create a Password Protected Certificate". Enter a password and download your encrypted certificate, named usercred.p12. The certificate can be obtained by using the openssl pcks12 command as: `openssl pkcs12 -in [your-cert-file] -clcerts -nokeys -out usercert.pem`
-      3. Email to [paschos@uchicago.edu](paschos@uchicago.edu) the output of the following command which will print out your DN (Distinguish Name): `openssl x509 -in usercert.pem -noout -subject`
+* Logon with your institutional credentials at [http://cilogon.org](http://cilogon.org)
+* Select "Create a Password Protected Certificate". Enter a password and download your encrypted certificate, named usercred.p12. The certificate can be obtained by using the openssl pcks12 command as: `openssl pkcs12 -in [your-cert-file] -clcerts -nokeys -out usercert.pem`
+* Email [paschos@uchicago.edu](paschos@uchicago.edu) the output of the following command which will print out your DN (Distinguish Name): `openssl x509 -in usercert.pem -noout -subject`
 
 Once your DN has been entered in the user access list you will be able to access the OSG Connect CI Logon collection with the Globus Connect client by 
 validating with your institution credentials. Navigate to the OSG Snowmass21 Collaborations Connect storage by typing in the Path box `/stash/collab`. You can then navigate to your user directory as shown in the example below:
@@ -51,7 +51,7 @@ In both cases, users can create subdirectories and organize content by either us
 On the right panel of the Globus Connect client tool you can search and connect to another collection. 
 The latter can be your own laptop/server or a collaboration end point that has provided a Globus Connect door for the researchers to use. To transfer files you can select the list files from your local computer and then select Start. To transfer files out simply reverse the direction of the process.
 
- **Important** You can not access your home directories on the snowmass21 login node over the Globus door. However, you have access to the /stash/collab directory when they login to login.snowmass21.io. Files can then be moved or copied over to your home directory. 
+ **Important**: You can not access your home directories on the snowmass21 login node over the Globus door. However, you have access to the /stash/collab directory when they login to login.snowmass21.io. Files can then be moved or copied over to your home directory. 
 
 
 ## Data for grid jobs
