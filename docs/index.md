@@ -28,7 +28,7 @@ This section provides information on:
 
 1. [Storage locations](data_management_main.md#Storage-locations-on-Connect-node)
 2. [Transfering files](data_management_main.md#Transferring-data)
-3. [Data on the grid]
+3. [Data on the grid](data_management_main.md#Data-for-grid-jobs)
                    
 ## [Access to Software](software.md)
 
