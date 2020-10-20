@@ -26,7 +26,7 @@ This section provides an introduction on how to submit jobs to the OSG from the 
 
 This section provides information on:
 
-1. Storage locations available to the user
+1. [Storage locations](data_management_main.md#Storage-locations-on-Connect-node)
 2. How to transfer files to and from the Snowmass21 Connect node
 3. Methods of making files available to the grid for jobs
                    
