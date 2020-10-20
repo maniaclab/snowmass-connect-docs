@@ -40,5 +40,3 @@ The Snowmass21 Connect service is supported by the University of Chicago and the
 <img src="snowmass2021_logo.png" alt="snowmass21" width="200"/>
 <img src="snowmass-connect-logo.png" alt="snowmass21connect" width="200"/>
 <img src="osg_logo2.png" alt="osg" width="200"/>
-
-testing content here
