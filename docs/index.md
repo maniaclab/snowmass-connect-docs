@@ -13,9 +13,9 @@ As a user you have access to the following services:
 
 This section provides information on:
 
-1. [How to obtain an account](accounting.md#Obtain-an-account)
-2. [How to login to the resource](accounting.md#Login-to-the-Submit-Node)
-3. [How to manage that account](accounting.md#Manage-your-account)  
+1. [How to obtain an account](accounting.md#obtain-an-account)
+2. [How to login to the resource](accounting.md#login-to-the-submit-node)
+3. [How to manage that account](accounting.md#manage-your-account)  
 
 ## [Job Submissions](job_submission.md)
 
@@ -25,9 +25,9 @@ This section provides an introduction on how to submit jobs to the OSG from the 
 
 This section provides information on:
 
-1. [Storage locations](data_management_main.md#Storage-locations-on-Connect-node)
-2. [Transfering files](data_management_main.md#Transferring-data)
-3. [Data on the grid](data_management_main.md#Data-for-grid-jobs)
+1. [Storage locations](data_management_main.md#storage-locations-on-connect-node)
+2. [Transfering files](data_management_main.md#transferring-data)
+3. [Data on the grid](data_management_main.md#data-for-grid-jobs)
                    
 ## [Access to Software](software.md)
 
