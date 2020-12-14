@@ -2,7 +2,7 @@
 
 You can access software on the Snomwass21 Connect node from:
 
-1. Local installations in `/local-scratch/software`
+1. Local installations in `/software`
 2. CVMFS in commonly used repos for the High Energy Physics community
 2. OSG module environment 
 
@@ -29,12 +29,12 @@ There are two things required in order to use modules in your HTCondor job.
 
 ### Snowmass21 login node (local)
 
-For local calculations on the Snowmass Connect node, Delphes is installed in `/local-scratch/software/Delphes-3.4.2`. You must first execute the following setup script: `source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh` before using the executables. 
+For local calculations on the Snowmass Connect node, Delphes is installed in `/software/Delphes-3.4.2`. You must first execute the following setup script: `source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh` before using the executables. 
 
 Export the installation path and adjust the LD_LIBRARY_PATH of the supporting libraries as:
 
-    export delphes_install=/local-scratch/software/Delphes-3.4.2
-    module use /local-scratch/software/modulefiles/
+    export delphes_install=/software/Delphes-3.4.2
+    module use /software/modulefiles/
     module load gcc-8.2.0
     export LD_LIBRARY_PATH=/cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/lib:$LD_LIBRARY_PATH
     export PATH=$delphes_install:$PATH
@@ -85,16 +85,16 @@ There is no need to source any external environment and all Delphes executables 
 
 ### Snowmass21 login node (local)
 
-Whizard is installed on the snowmass21 submit node in /local-scratch/software/ee_gg. You must set up your environment before by running the following on the submit node: 
+Whizard is installed on the snowmass21 submit node in /software/ee_gg. You must set up your environment before by running the following on the submit node: 
 
-        module use /local-scratch/software/modulefiles/
+        module use /software/modulefiles/
         module load gcc-8.2.0 
-        export LD_LIBRARY_PATH=/local-scratch/software/ee_gen/./packages/OpenLoops/lib:$LD_LIBRARY_PATH
-        export PATH=/local-scratch/software/ee_gen/bin:$PATH 
+        export LD_LIBRARY_PATH=/software/ee_gen/./packages/OpenLoops/lib:$LD_LIBRARY_PATH
+        export PATH=/software/ee_gen/bin:$PATH 
         
-Examples are contained in this directory: /local-scratch/software/ee_gen/share/whizard/examples. The whizard executable will be in your $PATH. You can run an example from your home directory as: 
+Examples are contained in this directory: /software/ee_gen/share/whizard/examples. The whizard executable will be in your $PATH. You can run an example from your home directory as: 
     
-        whizard /local-scratch/software/ee_gen/share/whizard/examples/LEP_cc10.sin
+        whizard /software/ee_gen/share/whizard/examples/LEP_cc10.sin
 
 ### Whizzard on the OSG
 
