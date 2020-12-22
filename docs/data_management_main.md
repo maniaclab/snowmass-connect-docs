@@ -17,7 +17,7 @@ submission files and small size data. Large input files for jobs on the grid sho
 ## Transferring data 
 You can transfer data from external institutions to the Snowmass21 Connect using any of the three following methods:
 
-1. **scp**. For example: `scp -r <file_or_directory> <user_id>@login.snowmass21.io:/collab/user/<user_id>/.` will copy a file or a directory
+1. **scp**. For example: `scp -r <file_or_directory> <user_id>@login.snowmass21.io:/project/users/<user_id>/.` will copy a file or a directory
 from your local machine to your user directory on stash storage. The ssh-keys used for your profile on the Snowmass Connect portal
 must stored on the local machine.
 
