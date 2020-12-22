@@ -8,7 +8,7 @@ This section describes the storage locations available to the users on the Snowm
 
 1. **Home** directory. Your home directory, `/home/<user_id>`, has 50GB of storage available. It is recommended to use it for storing scripts, 
 submission files and small size data. Large input files for jobs on the grid should not be stored here.
-2. **Local storage** in`/local-scratch`. This is a 200TB local disk where you can create your own directory, store data and build your own software stack. It should be used as your private work area for local analysis or processing jobs on the node. 
+2. **Local storage** in`/project/users/<user_id>`. This is a 200TB local disk where you can store data and build your own software stack. It should be used as your private work area for local analysis or processing jobs on the node. 
 3. **Stash storage** is accebible from the login node at `/collab`. Each user receives a 1TB quota for their personal user space. There is also a shared 50TB allocation for the project. This location is primarily intented for staging data that need to be accessible by the OSG compute sites running your job. There two subdirectories in `/collab`:  
     * For private user data: `/collab/user/<user_id>`  
     * For shared data among the members of the Snowmass21 project:`/collab/project/snowmass21/data`
