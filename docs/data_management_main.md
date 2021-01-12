@@ -1,6 +1,6 @@
 # Data Management
 
-This section provides important information on how you can manage their data on the Snowmass21 connect node.
+This section provides important information on how you can manage their data on the Snowmass21 login node.
 
 ## Storage locations on Connect node
 
