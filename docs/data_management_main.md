@@ -1,10 +1,10 @@
 # Data Management
 
-This section provides important information on how you can manage their data on the Snowmass21 login node.
+This section provides important information on how you can manage your data on the Snowmass21 login node.
 
 ## Storage locations on Connect node
 
-This section describes the storage locations available to the users on the Snowmass21 connect node.
+Storage locations available to the users on the Snowmass21 connect node:
 
 1. **Home** directory. Your home directory, `/home/<user_id>`, has 50GB of storage available. It is recommended to use it for storing scripts, 
 submission files and small size data. Large input files for jobs on the grid should not be stored here.
