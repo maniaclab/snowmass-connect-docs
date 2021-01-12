@@ -52,7 +52,7 @@ In both cases, users can create subdirectories and organize content by either us
 On the right panel of the Globus Connect client tool you can search and connect to another collection. 
 The latter can be your own laptop/server or a collaboration end point that has provided a Globus Connect door for the researchers to use. To transfer files you can select the list files from your local computer and then select Start. To transfer files out simply reverse the direction of the process.
 
- **Important**: You can not access home and work directories on the login server over the Globus door. However, you have access to the /stash/collab directory when yoo login to login.snowmass21.io. Files can then be moved or copied over to your home or work directory. 
+ **Important**: You can not access home and work directories on the login server over the Globus door. Since you have access to the /stash/collab directory, you can login to login.snowmass21.io and move or copy files over to your home or work directory. 
 
 
 ## Data for grid jobs
