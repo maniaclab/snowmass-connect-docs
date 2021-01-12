@@ -8,29 +8,30 @@ This section describes the storage locations available to the users on the Snowm
 
 1. **Home** directory. Your home directory, `/home/<user_id>`, has 50GB of storage available. It is recommended to use it for storing scripts, 
 submission files and small size data. Large input files for jobs on the grid should not be stored here.
-2. **Local storage** in`/project/users/<user_id>`. This is a 200TB local disk where you can store data and build your own software stack. It should be used as your private work area for local analysis or processing jobs on the node. 
-3. **Stash storage** is accebible from the login node at `/collab`. Each user receives a 1TB quota for their personal user space. There is also a shared 50TB allocation for the project. This location is primarily intented for staging data that need to be accessible by the OSG compute sites running your job. There two subdirectories in `/collab`:  
-    * For private user data: `/collab/user/<user_id>`  
-    * For shared data among the members of the Snowmass21 project:`/collab/project/snowmass21/data`
+2. **Local private storage** in`/work/<user_id>`. Each user directory has a quota of 5 TB to temporarily store data and build your own submission pipeline to the OSG. It can also be used as your private work area for local analysis or processing jobs on the login node. 
+3. **Local shared storage** in `/project/data`. This directory is for you to place data that needs to be shared with other users. Users can write there any data needed by multiple users and different jobs on the grid.
+4. **Stash storage** is accebible from the login node at `/collab` and is intented for datasets larger than 1GB each for/from jobs or for distribution to external institutions over http or globus. There two subdirectories in `/collab`:  
+    * For private user data in: `/collab/user/<user_id>`. Each user directory has a 1 TB quota.
+    * For shared data the Snowmass21 project members in:`/collab/project/snowmass21/data`, a 50TB allocation to serve the project storage needs.
 
 
 ## Transferring data 
 You can transfer data from external institutions to the Snowmass21 Connect using any of the three following methods:
 
-1. **scp**. For example: `scp -r <file_or_directory> <user_id>@login.snowmass21.io:/project/users/<user_id>/.` will copy a file or a directory
-from your local machine to your user directory on stash storage. The ssh-keys used for your profile on the Snowmass Connect portal
+1. **scp**. For example: `scp -r <file_or_directory> <user_id>@login.snowmass21.io:/work/<user_id>/.` will copy a file or a directory
+from your local machine to your user directory in local storage. The ssh-keys used for your profile on the Snowmass Connect portal
 must stored on the local machine.
 
 2. **rsync**. For example: `rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress test.transfer <user_id>@login.snowmass21.io:dump/` will copy the `test.transfer` file in the `/home/<user_id>/dump/` directory. If the directory
 does not exist, it will be created. As in `scp` the ssh-keys used for your profile on the Snowmass Connect portal
 must stored on the source machine.
 
-3. **Globus Connect** can be used to transfer files to stash storage only. Instructions on how to set up Globus Connect Personal can be found 
+3. **Globus Connect** can be used to transfer files to/from stash storage only. Instructions on how to set up Globus Connect Personal can be found 
 [here](https://www.globus.org/globus-connect-personal). Access to the stash storage endpoint is enabled by authenticating 
 against the Globus collection "OSG Connect CI Logon" using the GLobus Connect client. 
 You can search for the collection by name in the search bar of the File Manager.
 
-In order to access the stash storage on the Connect node via Globus online, you must have an institutional 
+In order to access the stash storage on the Snowmass login node via Globus online, you must have an institutional 
 based grid certificate issued by CILogon. To obtain one follow the steps below:
 
 * Logon with your institutional credentials at [http://cilogon.org](http://cilogon.org)
@@ -51,7 +52,7 @@ In both cases, users can create subdirectories and organize content by either us
 On the right panel of the Globus Connect client tool you can search and connect to another collection. 
 The latter can be your own laptop/server or a collaboration end point that has provided a Globus Connect door for the researchers to use. To transfer files you can select the list files from your local computer and then select Start. To transfer files out simply reverse the direction of the process.
 
- **Important**: You can not access your home directories on the snowmass21 login node over the Globus door. However, you have access to the /stash/collab directory when they login to login.snowmass21.io. Files can then be moved or copied over to your home directory. 
+ **Important**: You can not access home and work directories on the login server over the Globus door. However, you have access to the /stash/collab directory when yoo login to login.snowmass21.io. Files can then be moved or copied over to your home or work directory. 
 
 
 ## Data for grid jobs
@@ -63,7 +64,7 @@ There are four methods for the user to make data available to remote sites runni
         transfer_input_files = <comma separated files or directories>
         transfer_output_files = <comma separated files or directories>
 
-This method can leverage any storage location on the Snowmass21 Connect node. However it is recommended that you primarily use `/local-scratch` and avoid the `/home/<user_id>` directory.
+This method can leverage any storage location on the Snowmass21 Connect node. However it is recommended that you primarily use `/work/<user_id>` and avoid the `/home/<user_id>`.
 
 2. OSG's StashCache. To use this service, data should be placed either in `/collab/user/<user_id>` or 
 `/collab/project/snowmass21`. This method is recommended for input files larger than 1 GB each or 10 GB total from all input data. The recommended upper limit for the output files to be transfered back from the remote node is 10 GB per job. Users can use the stashcp tool to transfer data from their `/collab` space only to the remote host. You can insert the following command in your execution script to transfer data from `/collab/user/<user_id>` to the local
