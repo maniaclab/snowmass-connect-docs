@@ -67,7 +67,6 @@ There are four methods for the user to make data available to remote sites runni
         transfer_output_files = <comma separated files or directories>
 
 This method can leverage any storage location on the Snowmass21 Connect node. However it is recommended that you primarily use `/work/<user_id>` and avoid the `/home/<user_id>`.
-
 2. OSG's StashCache. To use this service, data should be placed either in `/collab/user/<user_id>` or 
 `/collab/project/snowmass21`. This method is recommended for input files larger than 1 GB each or 10 GB total from all input data. The recommended upper limit for the output files to be transfered back from the remote node is 10 GB per job. Users can use the stashcp tool to transfer data from their `/collab` space only to the remote host. You can insert the following command in your execution script to transfer data from `/collab/user/<user_id>` to the local
 directory on the remote worker node where your job is running:
@@ -88,9 +87,7 @@ For writes back from the job:
         xrdcp <file> root://stash.osgconnect.net:1094//osgconnect/collab/project/snowmass21/<diretory>/<file> 
         
 Note: The local filesystem on the snowmass node is *not* accessible by stashcp or xrdcp. You will need to use HTCondor transfer for files stored there. 
-
 3. If the filesize of each input dataset exceeds 10 GB then an alternative method for transfers is the GridFTP protocol using the gfal-copy tool. Please reach out for a consultation to discuss if your workflow can benefit from access to a GridFTP door.
-
 4. Transfers over HTTP. Files stored in the shared namespace, `/collab/project/snowmass21` are public and also accessible via HTTP. To access datta there you can use linux tools like wget as shown in the following example:
 
         wget http://stash.osgconnect.net/collab/project/snowmass21/<file_name>
