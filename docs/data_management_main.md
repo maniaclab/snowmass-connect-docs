@@ -57,7 +57,7 @@ The latter can be your own laptop/server or a collaboration end point that has p
  **Important**: You can not access home and work directories on the login server over the Globus door. Since you have access to the /stash/collab directory, you can login to login.snowmass21.io and move or copy files over to your home or work directory. 
 
 
-## Data for grid jobs
+## Data for OpenScience Pool jobs
 
 There are four methods for the user to make data available to remote sites running their jobs.
 
@@ -73,11 +73,21 @@ This method can leverage any storage location on the Snowmass21 Connect node. Ho
 directory on the remote worker node where your job is running:
 
         module load stashcache
-        stashcp /osgconnect/collab/user/<user_id>/<input_file> .
+        stashcp stash:///osgconnect/collab/user/<user_id>/<input_file> .
         
 To transfer data back to your collab space from the remote node run the following command in your execution script:
 
         stashcp <output_file> stash:///osgconnect/collab/user/<user_id>/<output_file>
+
+Stashcp uses an XrootD client for the file transfers. You can use XrootD directly to access files on stash from a remote node as follows: 
+
+        xrdcp root://stash.osgconnect.net:1094//osgconnect/collab/project/snowmass21/<directory>/file . 
+        
+For writes back from the job: 
+
+        xrdcp <file> root://stash.osgconnect.net:1094//osgconnect/collab/project/snowmass21/<diretory>/<file> 
+        
+Note: The local filesystem on the snowmass node is *not* accessible by stashcp or xrdcp. You will need to use HTCondor transfer for files stored there. 
 
 3. If the filesize of each input dataset exceeds 10 GB then an alternative method for transfers is the GridFTP protocol using the gfal-copy tool. Please reach out for a consultation to discuss if your workflow can benefit from access to a GridFTP door.
 
@@ -85,7 +95,7 @@ To transfer data back to your collab space from the remote node run the followin
 
         wget http://stash.osgconnect.net/collab/project/snowmass21/<file_name>
 
-You can insert such command in your execution script to download datasets on the remote worker node where your job is running. Alternatively, you can declare those files inside your HTCondor submission script as follows:
+You can insert a line like the one above in your execution script to download datasets on the remote worker node where your job is running. Alternatively, you can declare those files inside your HTCondor submission script as follows:
 
         transfer_input_files = http://stash.osgconnect.net/collab/project/snowmass21/<file_name>
 
