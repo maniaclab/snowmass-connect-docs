@@ -100,4 +100,3 @@ You can insert a line like the one above in your execution script to download da
         transfer_input_files = http://stash.osgconnect.net/collab/project/snowmass21/<file_name>
 
 HTTP based transfers are best for filesizes up to 1GB.
-
