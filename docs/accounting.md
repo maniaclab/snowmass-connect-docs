@@ -1,4 +1,4 @@
-# Access the Connect node 
+# Getting Started
 
 ## Obtain an account
 
