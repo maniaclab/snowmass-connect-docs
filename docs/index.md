@@ -9,19 +9,24 @@ As a user you have access to the following services:
 * Access to installed software and the means to make them available on the grid.
 * A local computing platform for non-grid interactive jobs to either test code or analyse data.
   
-## [Access the Connect node](accounting.md)
+## [Getting Started](accounting.md)
 
 This section provides information on:
 
-1. [How to obtain an account](accounting.md#obtain-an-account)
-2. [How to login to the resource](accounting.md#login-to-the-submit-node)
-3. [How to manage that account](accounting.md#manage-your-account)  
+1. [Request an account](accounting.md#obtain-an-account)
+2. [How to login](accounting.md#login-to-the-submit-node)
+3. [Managing your account](accounting.md#manage-your-account)  
 
-## [Job Submissions](job_submission.md)
+## [Software Access](software.md)
+
+This section provides information on how to access software on the Snowmass21 Connect node. It includes information on the OSG module environment and a guidance on  running installed software in support of the the Snowmass21 effort - organized between local jobs on the node and jobs on the grid where available.
+
+
+## [Job Submission](job_submission.md)
 
 This section provides an introduction on how to submit jobs to the OSG from the Snowmass21 Connect node. Addittional software-specific examples are included in the [software](#Access-to-Software) section.
 
-## [Data Management on Connect node](data_management_main.md)
+## [Data Management](data_management_main.md)
 
 This section provides information on:
 
@@ -29,13 +34,9 @@ This section provides information on:
 2. [Transfering files](data_management_main.md#transferring-data)
 3. [Data on the grid](data_management_main.md#data-for-grid-jobs)
                    
-## [Access to Software](software.md)
+## Support
 
-This section provides information on how to access software on the Snowmass21 Connect node. It includes information on the OSG module environment and a guidance on  running installed software in support of the the Snowmass21 effort - organized between local jobs on the node and jobs on the grid where available.
-
-## Support and Consultation
-
-The Snowmass21 Connect service is supported by the University of Chicago and the Open Science Grid. To report issues with the service or to request a consultation on submitting and running jobs on the OpenScienceG Grid please submit a ticket to <help@opensciencegrid.org>. Additional support is available in the **#snowmass-connect** channel at http://snowmass2021.slack.com.
+The Snowmass21 Connect service is supported by the University of Chicago and the Open Science Grid. To report issues with the service or to request a consultation on submitting and running jobs on the Open ScienceG Grid, please submit a ticket to <help@opensciencegrid.org>. Additional support is available in the **#snowmass-connect** channel at http://snowmass2021.slack.com.
 
 <img src="snowmass2021_logo.png" alt="snowmass21" width="200"/>
 <img src="snowmass-connect-logo.png" alt="snowmass21connect" width="200"/>
