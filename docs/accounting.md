@@ -15,7 +15,7 @@ subgroup: `snowmass21.energy` (energy frontier) or `snowmass21.cosmic` (cosmic f
 
 ## Login to the Submit Node
 
-Once you upload your ssh-keys in the Snowmass21 Connect [portal](https://connect.snowmass21.io) and your account request has been processed and approved, it takes a few minutes for your home directory to be created. You can then connect to the login node via `ssh` as usual:
+Once you upload your ssh-keys in the Snowmass21 Connect [profile](https://connect.snowmass21.io/profile) and your request has been approved, it takes about 30  minutes for your unix account to be created. You can then connect via `ssh` as usual:
 
 `ssh <user_id>@login.snowmass21.io` 
 
