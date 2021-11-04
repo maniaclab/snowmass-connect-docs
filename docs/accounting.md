@@ -11,7 +11,7 @@ create your home directory on the Snowmass submit node and grant you access via 
 2. You must use an insitutional email when you sign up. Applications using personal email addresses will be rejected. 
 
 In order to submit jobs to the OSG you should also follow up - once your account request is approved - with a request to be added to a particular 
-subgroup: `snowmass21.energy` (energy frontier) or `snowmass21.cosmic` (cosmic frontier) as appropriate. An email back will confirm your addition to your requested subgroup project. To do that navigate to the groups section in the portal here: [https://snowmass21.ci-connect.net/groups](https://snowmass21.ci-connect.net/groups) and select a particular subgroup to join.
+subgroup: `snowmass21.energy` (energy frontier) or `snowmass21.cosmic` (cosmic frontier) as appropriate. An email back will confirm your addition to your requested subgroup project. To do that navigate to the groups section in the portal here: [https://connect.snowmass21.io/groups](https://connect.snowmass21.io/groups) and select a particular subgroup to join.
 
 ## Login to the Submit Node
 
