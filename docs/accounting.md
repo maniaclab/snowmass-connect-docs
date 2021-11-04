@@ -2,9 +2,8 @@
 
 ## Obtain an account
 
-In order to access the Snowmass21 Connect node you will need to sign up for an account.
-To sign up, visit [https://connect.snowmass21.io](https://connect.snowmass21.io). You will need to authenticate via CILogon to your institutional sign in page 
-before you proceed. One your membership request is approved you will be notified by email. 
+In order to access the Snowmass21 Connect node `login.snowmass21.io` you will need to sign up for an account.
+To sign up, visit [https://connect.snowmass21.io](https://connect.snowmass21.io). You will authenticate via CILogon using your home institution's idenity management service. One your membership request is approved you will be notified by email. 
 
 Important steps:
 
