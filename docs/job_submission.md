@@ -15,7 +15,7 @@ as the project name. A minimal HTCondor submission script, `myjob.submit`, to th
     +ProjectName="snowmass21.energy"
     Queue 1
 
-Refer to the [HTCondor manual](https://htcondor.readthedocs.io/en/stable/users-manual/index.html) and the [OSG Helpdesk](https://support.opensciencegrid.org/support/home) for more information on the declared parameters and on customizing your submission scripts.
+Refer to the [HTCondor manual](https://htcondor.readthedocs.io/en/stable/users-manual/index.html) or the [OSG Helpdesk](https://support.opensciencegrid.org/support/home) for more information on the declared parameters and on customizing your submission scripts.
 
 When the HTCondor script above is submitted, you request a remote worker node with 1 core and 1 GB to run the `run.sh` executable. In this case, `run.sh` is a shell script that contains a list of commands that executes your workload on the worker node.  For example: 
 
