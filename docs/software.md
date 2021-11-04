@@ -1,4 +1,4 @@
-# Access to Software
+# Software Access
 
 You can access software on the Snomwass21 Connect node from:
 
