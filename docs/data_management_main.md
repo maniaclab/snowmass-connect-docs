@@ -18,7 +18,7 @@ submission files and small size data. Large input files for jobs on the grid sho
 
 
 ## Transferring data 
-You can transfer data from external institutions to the Snowmass21 Connect using any of the three following methods:
+You can transfer data to Snowmass21 Connect using any of the three following methods:
 
 1. **scp**. For example: `scp -r <file_or_directory> <user_id>@login.snowmass21.io:/work/<user_id>/.` will copy a file or a directory
 from your local machine to your user directory in local storage. The ssh-keys used for your profile on the Snowmass Connect portal
@@ -33,8 +33,7 @@ must stored on the source machine.
 against the Globus collection "OSG Connect CI Logon" using the GLobus Connect client. 
 You can search for the collection by name in the search bar of the File Manager.
 
-In order to access the stash storage on the Snowmass login node via Globus online, you must have an institutional 
-based grid certificate issued by CILogon. To obtain one follow the steps below:
+In order to access the stash storage on the Snowmass login node via Globus online, you must have a certificate issued by CILogon. To obtain one:
 
 * Logon with your institutional credentials at [http://cilogon.org](http://cilogon.org)
 * Select "Create a Password Protected Certificate". Enter a password and download your encrypted certificate, named usercred.p12. The certificate can be obtained by using the openssl pcks12 command as: `openssl pkcs12 -in [your-cert-file] -clcerts -nokeys -out usercert.pem`
