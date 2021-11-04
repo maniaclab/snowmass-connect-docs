@@ -9,4 +9,4 @@ The [Snowmass21 Connect](https://connect.snowmass21.io/) service supports high-t
   
 ## Support
 
-The Snowmass21 Connect service is supported by the [OSG](https://opensciencegrid.org/). To report issues with the service or to request a consultation, please submit a ticket to <help@opensciencegrid.org>. Community support is available in the **#snowmass-connect** channel at http://snowmass2021.slack.com.
+The Snowmass21 Connect service is supported by the [OSG](https://opensciencegrid.org/). To report issues or to request a consultation, please submit a ticket to <help@opensciencegrid.org>. Community support is available in the **#snowmass-connect** channel at http://snowmass2021.slack.com.
