@@ -2,7 +2,7 @@
 
 ## Obtain an account
 
-To access the Snowmass21 Connect login server `login.snowmass21.io` request an account at [https://connect.snowmass21.io](https://connect.snowmass21.io). Hit the Sign Up button and follow instructions. You will authenticate via CILogon using your home institution's idenity management service. One your membership request is approved you will be notified by email. 
+To access the Snowmass21 Connect login server `login.snowmass21.io` request an account using the [web portal](https://connect.snowmass21.io). Hit the Sign Up button and follow instructions. You will authenticate via CILogon using your home institution's idenity management service. One your membership request is approved you will be notified by email. 
 
 Important steps:
 
