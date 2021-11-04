@@ -1,6 +1,6 @@
 # Data Management
 
-This section provides a list of important information on how you can manage your data on the Snowmass21 login node.
+This section provides a list of important information on how you can manage your data on the Snowmass21 login node (`login.snowmass21.io`).
 
 ## Filesystems
 
