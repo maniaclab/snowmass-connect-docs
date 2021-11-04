@@ -29,7 +29,7 @@ If you need an interactive environment to support export of graphics back to you
 
 `ssh -X <user_id>@login.snowmass21.io` 
 
-You would also need to make your terminal X11 compatible. For machines running MacOS a useful tool can be found [here](https://www.xquartz.org/)
+You would also need to make your terminal X11 compatible. 
 
 ## Manage your account
 
