@@ -1,4 +1,4 @@
-# Job Submission to the OSG
+# Job Submission
 
 This section provides a short introduction on how to submit jobs to the OSG from the Snowmass Connect login node using the snowmass21.energy subgroup 
 as the project name. A minimal HTCondor submission script, `myjob.submit`, to the OSG is inlined below:
