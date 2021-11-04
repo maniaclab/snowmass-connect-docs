@@ -20,9 +20,9 @@ Once you upload your ssh-keys in the Snowmass21 Connect [profile](https://connec
 `ssh <user_id>@login.snowmass21.io` 
 
 You can find your `<user_id>` from your profile on the Snowmass21 Connect portal. The login node is also a submission node for 
-jobs to the Open Science Grid. Upon login you will land in your home directory `/home/<user_id>`. Your home 
+jobs to the OSG Open Science Pool. Upon login you will land in your home directory `/home/<user_id>`. Your home 
 directory has 50GB of quota. Use your home directory to store job submission files, scripts and code. Do **not** store large files 
-(larger than 300 MB) in your home directory for the purpose of submissions to the OSG.
+(larger than 300 MB) in your home directory for the purpose of submission to the OSG.
 
 If you need an interactive environment to support export of graphics back to your machine, you would need to use the -X or -Y flag in your ssh command:
 
@@ -32,5 +32,4 @@ You would also need to make your terminal X11 compatible.
 
 ## Manage your account
 
-You can come back to the portal if you need to change your institutional affiliation, email, join another subgroup or upload additional ssh-keys to your account. Account management is 
-controlled by an automated process which will only make ssh-keys persistent in your user account if they are uploaded through the portal. 
+You can come back to the portal if you need to change your institutional affiliation, email, join another subgroup or upload additional ssh-keys to your account. Account management is controlled by an automated process which will only make ssh-keys persistent in your user account if they are uploaded through the portal. 
