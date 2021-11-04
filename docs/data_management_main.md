@@ -56,11 +56,11 @@ The latter can be your own laptop/server or a collaboration end point that has p
  **Important**: You can not access home and work directories on the login server over the Globus door. Since you have access to the /stash/collab directory, you can login to login.snowmass21.io and move or copy files over to your home or work directory. 
 
 
-## Data for OpenScience Pool jobs
+## Data Access for Open Science Pool jobs
 
-There are four methods for the user to make data available to remote sites running their jobs.
+There are four methods available:
 
- 1. HTCondor File Transfer. This method is recommended for the majority of computational workflows running on the OSG. Users can employ this method if the total size of the input data per job does not exceed 1 GB. In addition, OSG recommends that the output data per job that need to be transfered back does not exceed 1 GB as well. To enable HTCondor File transfers for your input and output data insert the following parameters anywhere in your HTCondor submit file:
+ 1. HTCondor File Transfer. This method is recommended for the majority of computational workflows running on the OSG. Users can employ this method if the total size of the input data per job does not exceed 1 GB. In addition, OSG recommends that the output data per job that need to be transfered back does not exceed 1 GB as well. To enable HTCondor File transfers for your input and output data, insert the following parameters anywhere in your HTCondor submit file:
 
         transfer_input_files = <comma separated files or directories>
         transfer_output_files = <comma separated files or directories>
