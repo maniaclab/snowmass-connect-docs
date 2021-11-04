@@ -2,18 +2,18 @@
 
 This section provides a list of important information on how you can manage your data on the Snowmass21 login node.
 
-## Storage locations on Connect node
+## Filesystems
 
-Storage locations available to the users on the Snowmass21 connect node:
+The Snowmass Connect service has four filesystems you should be aware of: 
 
 1. **Home** directory. Your home directory, `/home/<user_id>`, has 50GB of storage available. It is recommended to use it for storing scripts, 
 submission files and small size data. Large input files for jobs on the grid should not be stored here.
 2. **Local private storage** in`/work/<user_id>`. Each user directory has a quota of 5 TB to temporarily store data and build your own submission pipeline to the OSG. It can also be used as your private work area for local analysis or processing jobs on the login node. 
 3. **Local shared storage** in `/project/data`. This directory is for you to place data that needs to be shared with other users. Users can write there any data needed by multiple users and different jobs on the grid.
-4. **Stash storage** is accebible from the login node at `/collab` and is intented for datasets larger than 1GB each for jobs or for distribution to external institutions over http or globus. There are two relevant to snowmass subdirectories in `/collab`:  
+4. **CephFS storage ("Stash")** is accebible from the login node at `/collab` and is intended for datasets larger than 1GB each for jobs or for distribution to external institutions over http or Globus. There are two relevant subdirectories in `/collab`:  
     * For private user data: `/collab/user/<user_id>`. Each user directory has a 1 TB quota.
     * For shared data the Snowmass21 project members: `/collab/project/snowmass21/data`. This is a 50TB shared storage allocation.
-    * Note that the `/collab/user/<user_id>` location is availble directly from remote nodes to write output with the stashcp method - for large output files. The project space (`/collab/project/snowmass21`) is *not* accessible for direct write. 
+    * Note that the `/collab/user/<user_id>` location is available directly from remote nodes to write output with the stashcp method - for large output files. The project space (`/collab/project/snowmass21`) is *not* accessible for direct write. 
     * Note also that using HTCondor for transfering files back from the worker nodes will use the NFS mount on the login node if data are directed to the `/collab` locations. Performace for large file writes will has less performance when compared to the direct method (stashcp).
 
 
