@@ -87,6 +87,10 @@ For writes back from the job:
         xrdcp <file> root://stash.osgconnect.net:1094//osgconnect/collab/project/snowmass21/<diretory>/<file> 
         
 Note: The local filesystem on the snowmass node is *not* accessible by stashcp or xrdcp. You will need to use HTCondor transfer for files stored there. 
+
+Data can also be accessed over cvmfs here: 
+
+      /cvmfs/stash.osgstorage.org/osgconnect/collab/project/snowmass21/data 
    
  3. If the filesize of each input dataset exceeds 10 GB then an alternative method for transfers is the GridFTP protocol using the gfal-copy tool. Please reach out for a consultation to discuss if your workflow can benefit from access to a GridFTP door.
    
