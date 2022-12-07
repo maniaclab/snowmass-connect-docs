@@ -24,7 +24,7 @@ There are two things required in order to use modules in your HTCondor job.
 
 ## Running Delphes
 
-### Snowmass21 login node (local)
+### Snowmass21 login host
 
 For local calculations on the Snowmass Connect node, Delphes is installed in `/software/Delphes-3.4.2`. You must first execute the following setup script: `source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh` before using the executables. 
 
@@ -52,7 +52,7 @@ Running Delphes with files accessible via HTTP. The following example downloads 
 
     curl http://cp3.irmp.ucl.ac.be/~demin/test.hepmc.gz | gunzip | $delphes_install/DelphesHepMC $delphes_install/cards/delphes_card_CMS.tcl delphes_output.root
 
-### Delphes on the OSG
+### Delphes on the OSPool
 
 For jobs on OSG, it recommended you use the singularity container image hosted `/cvmfs/singularity.opensciencegrid.org/snowmass21software/delphes-osg:latest`. The image contains the full installation of the software which includes the examplles folder. The following example is a submission script which will request the availability of Singularity as a requirement on the remote worker node and loads the image for your job. 
 
