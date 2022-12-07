@@ -1,13 +1,10 @@
 # Software Access
 
-You can access software on the Snomwass21 Connect node from:
+You can access software on the Snomwass21 login host from:
 
-1. Local installations in `/software`
-2. CVMFS in commonly used repos for the High Energy Physics community
-2. OSG module environment 
-
-For applications that need to run on OSG grid, only options 2) and 3) are viable. Two new CVMFS repos contain applications deployed for OSG jobs
-`/cvmfs/snowmass21.opensciencegrid.org/software` and `/cvmfs/singularity.opensciencegrid.org/snowmass21software/`.
+1. Local installations in `/software`. This option is only available for local jobs.
+2. Installations in stash in `/collab/project/snowmass21/software/`. The software is also available via CVMFS in ` /cvmfs/stash.osgstorage.org/osgconnect/collab/project/snowmass21/software`
+3. Commonly used repos in CVMFS for the High Energy Physics community
 
 ## The OSG Module Environment
 
