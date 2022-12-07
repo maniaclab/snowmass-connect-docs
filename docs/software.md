@@ -26,7 +26,11 @@ The following contains a list of installed packages:
         LCIO
         miniDST
 
-4. Commonly used repos in CVMFS for the High Energy Physics community
+4. Commonly used repos in CVMFS for the High Energy Physics community. For example you can set up your environment to run LHAPDF on the local host or as the OSPool job as:
+
+        source /cvmfs/sft.cern.ch/lcg/views/LCG_101/x86_64-centos7-gcc8-opt/setup.sh
+        export PATH=/cvmfs/sft.cern.ch/lcg/external/texlive/2020/bin/x86_64-linux/:$PATH
+        export LHAPDF_DATA_PATH=/cvmfs/sft.cern.ch/lcg/external/lhapdfsets/current/:/cvmfs/sft.cern.ch/lcg/views/LCG_101/x86_64-centos7-gcc8-opt/share/LHAPDF/
 
 ## The OSG Module Environment
 
