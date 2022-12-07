@@ -32,11 +32,11 @@ The following contains a list of installed packages:
 2. Installations in stash in `/collab/project/snowmass21/software/`. The software is also available via CVMFS in ` /cvmfs/stash.osgstorage.org/osgconnect/collab/project/snowmass21/software`
 The following contains a list of installed packages:
 
-    cepcenv
-    Delphes-3.4.2
-    julia
-    LCIO
-    miniDST
+        cepcenv    
+        Delphes-3.4.2
+        julia
+        LCIO
+        miniDST
 
 4. Commonly used repos in CVMFS for the High Energy Physics community
 
