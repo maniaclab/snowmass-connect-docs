@@ -7,15 +7,25 @@ The following contains a list of installed packages:
 
 
     cepcenv
+    
     Delphes-3.4.2
+    
     ee_gen
-    FCCAnalyses    
+    
+    FCCAnalyses
+    
     LCIO
+    
     LCIO_snowmass
+    
     MG5
+    
     MG5_aMC_v3_0_3
+    
     miniconda3
+    
     pythia8303
+    
     rivet
 
 
