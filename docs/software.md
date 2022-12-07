@@ -1,6 +1,6 @@
 # Software Access
 
-You can access software on the Snomwass21 host from:
+You can access software on the Snomwass21 host.
 
 1. Local installations in `/software`. This option is only available for local jobs.
 The following contains a list of installed packages:
