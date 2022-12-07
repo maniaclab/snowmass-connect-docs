@@ -8,9 +8,9 @@ You can access software on the Snomwass21 login host from:
 
 ## The OSG Module Environment
 
-Many commonly used software packages and libraries are provided on the OSG through the module command.  OSG modules are made available through the OSG Application Software Installation Service (OASIS) CVMFS repo.
+The OSG Module Environment is being deprecated but still available if needed. Users should keep in mind that the versions of the available packages are old and there will be no effort to updating them in the future. Here are some tips in using modules:
 
-Use the module avail command on the Snowmass21 Connect node to see what software and libraries are available: `module avail`. Use the load command to load a specific module: `module load <name_of_module`.  For example, in the [Job Submission Guidelines](index.md#Job-Submissions-to-the-OSG), users need to load the  stashcache module `module load stashcache` in order to the use the stashcp command on a remote node and transfer data there.
+Use the `module avail` command on the Snowmass21 Connect host to see what software and libraries are available. Use the load command to load a specific module: `module load <name_of_module`. 
 
 There are two things required in order to use modules in your HTCondor job.
 
