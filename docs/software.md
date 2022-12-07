@@ -48,7 +48,7 @@ There are two things required in order to use modules in your HTCondor job.
 
 ### Snowmass21 login host
 
-For local calculations on the Snowmass Connect node, Delphes is installed in `/software/Delphes-3.4.2`. You must first execute the following setup script: `source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh` before using the executables. 
+For local calculations on the Snowmass21 host, Delphes is installed in `/software/Delphes-3.4.2`. You must first execute the following setup script: `source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh` before using the executables. 
 
 Export the installation path and adjust the LD_LIBRARY_PATH of the supporting libraries as:
 
@@ -102,7 +102,7 @@ There is no need to source any external environment and all Delphes executables 
 
 ## Running Whizard
 
-### Snowmass21 login node (local)
+### Snowmass21 login host (local)
 
 Whizard is installed on the Snowmass21 host in /software/ee_gen. You must set up your environment before by running the following on the submit node: 
 
@@ -115,9 +115,9 @@ Examples are contained in this directory: /software/ee_gen/share/whizard/example
     
         whizard /software/ee_gen/share/whizard/examples/LEP_cc10.sin
 
-### Whizzard on the OSG
+### Whizzard on the OSPool
 
-Whizard is also available over cvmfs in /cvmfs/snowmass21.opensciencegrid.org/ee_gg. To run on the grid, ensure that your submit script has `Requirements = (HAS_MODULES =?= TRUE)`. You must also source the setup script in /cvmfs/snowmass21.opensciencegrid.org/ee_gg/setup.sh which will set up your environment. An example of an OSG job submission for whizard is inlined below:
+Whizard is also available over cvmfs in /cvmfs/snowmass21.opensciencegrid.org/ee_gg. To run on the grid, ensure that your submit script has `Requirements = (HAS_MODULES =?= TRUE)`. You must also source the setup script in /cvmfs/snowmass21.opensciencegrid.org/ee_gg/setup.sh which will set up your environment. An example of a job submission to the OSPool for whizard is inlined below:
 
 Submit script:
 
