@@ -14,7 +14,8 @@ The following contains a list of installed packages:
         MG5    
         MG5_aMC_v3_0_3   
         miniconda3   
-        pythia8303  
+        pythia8303
+        ilc
         rivet
 
 2. Installations in stash in `/collab/project/snowmass21/software/`. The software is also available via CVMFS in ` /cvmfs/stash.osgstorage.org/osgconnect/collab/project/snowmass21/software`
