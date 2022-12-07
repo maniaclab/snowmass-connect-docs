@@ -8,7 +8,7 @@ You can access software on the Snomwass21 login host from:
 
 ## The OSG Module Environment
 
-The OSG Module Environment is being deprecated but still available if needed. Users should keep in mind that the versions of the available packages are old and there will be no effort to updating them in the future. Here are some tips in using modules:
+The OSG Module Environment is being deprecated but still available if needed. Users should keep in mind that the versions of the available packages are old and there will be no effort to update them in the future. Here are some tips in using modules:
 
 Use the `module avail` command on the Snowmass21 Connect host to see what software and libraries are available. Use the load command to load a specific module: `module load <name_of_module`. 
 
