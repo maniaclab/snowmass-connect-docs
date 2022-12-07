@@ -1,10 +1,34 @@
 # Software Access
 
-You can access software on the Snomwass21 login host from:
+You can access software on the Snomwass21 host from:
 
 1. Local installations in `/software`. This option is only available for local jobs.
+The following contains a list of installed packages:
+cepcenv
+Delphes-3.4.2
+ee_gen
+FCCAnalyses
+gridpacks
+jstupak
+LCIO
+LCIO_snowmass
+MG5
+MG5_aMC_v3_0_3
+miniconda3
+modulefiles
+pythia8303
+python3.6
+rivet
+
 2. Installations in stash in `/collab/project/snowmass21/software/`. The software is also available via CVMFS in ` /cvmfs/stash.osgstorage.org/osgconnect/collab/project/snowmass21/software`
-3. Commonly used repos in CVMFS for the High Energy Physics community
+The following contains a list of installed packages:
+cepcenv
+Delphes-3.4.2
+julia
+LCIO
+miniDST
+
+4. Commonly used repos in CVMFS for the High Energy Physics community
 
 ## The OSG Module Environment
 
@@ -82,7 +106,7 @@ There is no need to source any external environment and all Delphes executables 
 
 ### Snowmass21 login node (local)
 
-Whizard is installed on the snowmass21 submit node in /software/ee_gg. You must set up your environment before by running the following on the submit node: 
+Whizard is installed on the Snowmass21 host in /software/ee_gen. You must set up your environment before by running the following on the submit node: 
 
         module use /software/modulefiles/
         module load gcc-8.2.0 
