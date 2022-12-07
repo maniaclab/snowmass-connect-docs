@@ -4,29 +4,27 @@ You can access software on the Snomwass21 host from:
 
 1. Local installations in `/software`. This option is only available for local jobs.
 The following contains a list of installed packages:
-cepcenv
-Delphes-3.4.2
-ee_gen
-FCCAnalyses
-gridpacks
-jstupak
-LCIO
-LCIO_snowmass
-MG5
-MG5_aMC_v3_0_3
-miniconda3
-modulefiles
-pythia8303
-python3.6
-rivet
+
+    cepcenv
+    Delphes-3.4.2
+    ee_gen
+    FCCAnalyses    
+    LCIO
+    LCIO_snowmass
+    MG5
+    MG5_aMC_v3_0_3
+    miniconda3
+    pythia8303
+    rivet
 
 2. Installations in stash in `/collab/project/snowmass21/software/`. The software is also available via CVMFS in ` /cvmfs/stash.osgstorage.org/osgconnect/collab/project/snowmass21/software`
 The following contains a list of installed packages:
-cepcenv
-Delphes-3.4.2
-julia
-LCIO
-miniDST
+
+    cepcenv
+    Delphes-3.4.2
+    julia
+    LCIO
+    miniDST
 
 4. Commonly used repos in CVMFS for the High Energy Physics community
 
