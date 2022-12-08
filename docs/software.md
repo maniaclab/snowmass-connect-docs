@@ -81,12 +81,17 @@ To run a singularity container in the OSPool, you will need to specify a set of 
         +ProjectName="snowmass21.energy"
         Queue 1
 
-File `run.sh` is a bash-shell script that contains a list of commands to be executed on the worker node. For example:
+File `run.sh` is a bash-shell script that contains a list of commands to be executed on the worker node. A generic example is as follows:
 
         #!/bin/bash 
-        echo "Sourcing Setup"
+        #set up the environment
         source /opt/ilcsoft/init_ilcsoft.sh
-        echo $PATH
+        #create a data directory
+        mkdir data
+        cd data
+        #download some data
+        wget  https://stash.osgconnect.net/collab/project/snowmass21/data/ilc/<some_data> 
+        #do some work
         
 ## Running Delphes
 
