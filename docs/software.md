@@ -56,7 +56,7 @@ There are two things required in order to use modules in your HTCondor job.
 
 Singularity is installed on the host. Below is an example that launches a container located in cvmfs and binds a directory located in the distributed filesystem to /data:
 
-        singularity run -B /collab/project/snowmass21/data/ilc:/data cvmfs/unpacked.cern.ch/registry.hub.docker.com/infnpd/mucoll-ilc-framework\:1.0-centos8
+        singularity run -B /collab/project/snowmass21/data/ilc:/data /cvmfs/unpacked.cern.ch/registry.hub.docker.com/infnpd/mucoll-ilc-framework\:1.0-centos8
 
 Then source the environment setup inside the container: 
 
