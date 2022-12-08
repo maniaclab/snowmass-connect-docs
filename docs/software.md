@@ -62,6 +62,32 @@ Then source the environment setup inside the container:
 
         Singularity> source /opt/ilcsoft/init_ilcsoft.sh 
 
+
+## Running a Singularity container in the OSPool
+
+To run a singularity container in the OSPool, you will need to specify a set of requirements and the /cvmfs location of the singularity image. Below is the same example from above but written as a job submission. Note, that if the singularity image is hosted in `/cvmfs/singularity.opensciencegrid.org` you only need to specify `HAS_SINGULARITY == TRUE`.
+
+        Universe = Vanilla
+        Executable   = run.sh
+        Requirements = ( ( HAS_SINGULARITY == TRUE ) && ( HAS_CVMFS_unpacked_cern_ch ) )
+        +SingularityImage = "/cvmfs/unpacked.cern.ch/registry.hub.docker.com/infnpd/mucoll-ilc-framework:1.6-centos8"
+        Error   = output.err.$(Cluster)-$(Process)
+        Output  = output.out.$(Cluster)-$(Process)
+        Log     = output.log.$(Cluster)
+        should_transfer_files = YES
+        WhenToTransferOutput = ON_EXIT
+        request_cpus = 1
+        request_memory = 5 GB
+        +ProjectName="snowmass21.energy"
+        Queue 1
+
+File `run.sh` is a bash-shell script that contains a list of commands to be executed on the worker node. For example:
+
+        #!/bin/bash 
+        echo "Sourcing Setup"
+        source /opt/ilcsoft/init_ilcsoft.sh
+        echo $PATH
+        
 ## Running Delphes
 
 ### Snowmass21 login host
