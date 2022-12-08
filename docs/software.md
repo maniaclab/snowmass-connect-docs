@@ -1,11 +1,11 @@
 # Software Access
 
-You can access software on the Snomwass21 host.
+You can access software from the Snomwass21 host installed in local directories or
+or repos in cvmfs.
 
 ## Installed Software 
 
-1. Local installations in `/software`. This option is only available for local jobs.
-The following contains a list of installed packages:
+1. Installations in `/software` includes the following packages:
 
         cepcenv
         Delphes-3.4.2    
@@ -20,8 +20,12 @@ The following contains a list of installed packages:
         ilc
         rivet
 
-2. Installations in stash in `/collab/project/snowmass21/software/`. The software is also available via CVMFS in ` /cvmfs/stash.osgstorage.org/osgconnect/collab/project/snowmass21/software`
-The following contains a list of installed packages:
+These can run on the local host or if the executables are static
+they can be transferred to remote worker nodes 
+for HTCCondor jobs in the OSPool.
+
+2. Installations in stash, `/collab/project/snowmass21/software/` includes the following 
+packages:
 
         cepcenv    
         Delphes-3.4.2
@@ -29,14 +33,28 @@ The following contains a list of installed packages:
         LCIO
         miniDST
 
-4. Commonly used repos in CVMFS for the High Energy Physics community. For example you can set up your environment to run Rivet with LHAPDF on the local host or as the OSPool job as:
+Those are also available via CVMFS in ` /cvmfs/stash.osgstorage.org/osgconnect/collab/project/snowmass21/software`
+and intended to run primarily as part HTCondor jobs to the OSPool.
+
+## Software in cvmfs repositories
+
+You can run software installed in commonly used cvmfs repos for the High Energy Physics community. 
+For example you can set up your environment to run Rivet with LHAPDF on the local host as:
 
         source /cvmfs/sft.cern.ch/lcg/views/LCG_101/x86_64-centos7-gcc8-opt/setup.sh
         export PATH=/cvmfs/sft.cern.ch/lcg/external/texlive/2020/bin/x86_64-linux/:$PATH
         export LHAPDF_DATA_PATH=/cvmfs/sft.cern.ch/lcg/external/lhapdfsets/current/:/cvmfs/sft.cern.ch/lcg/views/LCG_101/x86_64-centos7-gcc8-opt/share/LHAPDF/
         /cvmfs/sft.cern.ch/lcg/views/LCG_101/x86_64-centos7-gcc8-opt/bin/rivet <arguments>
 
-## Running a Singularity container
+You can also include theese lines in your execution script for
+a job submitted to the OSPool.
+
+## Software in Singularity containers
+
+Software stacks in singularity containers deployed in cvmfs 
+repos can run on the Snowmass21 host or reference the location of 
+the images in the submit script for jobs to the OSPool.
+We present two examples to demonstrate the two cases.
 
 ### Snowmass21 login host
 
