@@ -46,7 +46,7 @@ For example you can set up your environment to run Rivet with LHAPDF on the loca
         export LHAPDF_DATA_PATH=/cvmfs/sft.cern.ch/lcg/external/lhapdfsets/current/:/cvmfs/sft.cern.ch/lcg/views/LCG_101/x86_64-centos7-gcc8-opt/share/LHAPDF/
         /cvmfs/sft.cern.ch/lcg/views/LCG_101/x86_64-centos7-gcc8-opt/bin/rivet <arguments>
 
-You can also include theese lines in your execution script for
+You can also include these lines in your execution script for
 a job submitted to the OSPool.
 
 ## Software in Singularity containers
