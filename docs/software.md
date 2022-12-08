@@ -1,7 +1,7 @@
 # Software Access
 
 You can access software from the Snomwass21 host installed in local directories or
-or repos in cvmfs.
+repositories in cvmfs.
 
 ## Installed Software 
 
