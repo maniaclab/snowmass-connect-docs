@@ -50,6 +50,18 @@ There are two things required in order to use modules in your HTCondor job.
     Requirements = [Other requirements ] && (HAS_MODULES =?= TRUE)
 
 
+## Running a Singularity container
+
+### Snowmass21 login host
+
+Singularity is installed on the host. Below is an example that launches a container located in cvmfs and binds data stored on the distributed filesystem :
+
+        singularity run -B /collab/project/snowmass21/data/ilc:/data cvmfs/unpacked.cern.ch/registry.hub.docker.com/infnpd/mucoll-ilc-framework\:1.0-centos8
+
+Then source the environment setup inside the container: 
+
+        Singularity> source /opt/ilcsoft/init_ilcsoft.sh 
+
 ## Running Delphes
 
 ### Snowmass21 login host
