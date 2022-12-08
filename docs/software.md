@@ -36,22 +36,6 @@ The following contains a list of installed packages:
         export LHAPDF_DATA_PATH=/cvmfs/sft.cern.ch/lcg/external/lhapdfsets/current/:/cvmfs/sft.cern.ch/lcg/views/LCG_101/x86_64-centos7-gcc8-opt/share/LHAPDF/
         /cvmfs/sft.cern.ch/lcg/views/LCG_101/x86_64-centos7-gcc8-opt/bin/rivet <arguments>
 
-## The OSG Module Environment
-
-The OSG Module Environment is being deprecated but still available if needed. Users should keep in mind that the versions of the available packages are old and there will be no effort to update them in the future. Here are some tips in using modules:
-
-Use the `module avail` command on the Snowmass21 Connect host to see what software and libraries are available. Use the load command to load a specific module: `module load <name_of_module`. 
-
-There are two things required in order to use modules in your HTCondor job.
-
-    1. Create an execution script for the job. The script should load the needed modules before running the main application.  
-    
-    2. Include the following requirements in the HTCondor submission script:
-    Requirements = (HAS_MODULES =?= TRUE)
-    or 
-    Requirements = [Other requirements ] && (HAS_MODULES =?= TRUE)
-
-
 ## Running a Singularity container
 
 ### Snowmass21 login host
