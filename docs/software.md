@@ -63,7 +63,7 @@ Then source the environment setup inside the container:
         Singularity> source /opt/ilcsoft/init_ilcsoft.sh 
 
 
-## Running a Singularity container in the OSPool
+### Running a Singularity container in the OSPool
 
 To run a singularity container in the OSPool, you will need to specify a set of requirements and the /cvmfs location of the singularity image. Below is the same example from above but written as a job submission. Note, that if the singularity image is hosted in `/cvmfs/singularity.opensciencegrid.org` you only need to specify `HAS_SINGULARITY == TRUE`.
 
