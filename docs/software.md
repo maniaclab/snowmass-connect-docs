@@ -2,6 +2,8 @@
 
 You can access software on the Snomwass21 host.
 
+## Installed Software 
+
 1. Local installations in `/software`. This option is only available for local jobs.
 The following contains a list of installed packages:
 
