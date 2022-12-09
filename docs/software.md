@@ -20,9 +20,8 @@ repositories in cvmfs.
         ilc
         rivet
 
-These can run on the local host or if the executables are static
-they can be transferred to remote worker nodes 
-for HTCCondor jobs in the OSPool.
+These can run on the local host or, if the executables are static,
+in HTCCondor jobs submitted to the OSPool.
 
 2. The following packages are installed in stash, `/collab/project/snowmass21/software/`:
 
