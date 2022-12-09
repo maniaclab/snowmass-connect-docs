@@ -32,7 +32,7 @@ Running Delphes with files accessible via HTTP. The following example downloads 
 
 ### On the OSPool
 
-For jobs on OSG, it recommended you use the singularity container image hosted `/cvmfs/singularity.opensciencegrid.org/snowmass21software/delphes-osg:latest`. The image contains the full installation of the software which includes the examplles folder. The following example is a submission script which will request the availability of Singularity as a requirement on the remote worker node and loads the image for your job. 
+For OSPool jobs, it recommended you use the singularity container image hosted `/cvmfs/singularity.opensciencegrid.org/snowmass21software/delphes-osg:latest`. The image contains the full installation of the software which includes the examplles folder. The following example is a submission script which will request the availability of Singularity as a requirement on the remote worker node and loads the image for your job. 
 
     Universe = Vanilla
     Executable     = run.sh
@@ -73,7 +73,7 @@ Examples are contained in this directory: /software/ee_gen/share/whizard/example
 
 ### On the OSPool
 
-Whizard is also available over cvmfs in /cvmfs/snowmass21.opensciencegrid.org/ee_gg. To run on the grid, ensure that your submit script has `Requirements = (HAS_MODULES =?= TRUE)`. You must also source the setup script in /cvmfs/snowmass21.opensciencegrid.org/ee_gg/setup.sh which will set up your environment. An example of a job submission to the OSPool for whizard is inlined below:
+Whizard is also available over cvmfs in /cvmfs/snowmass21.opensciencegrid.org/ee_gg. To submit and run an HTCondor job on the OSPool ensure that your submit script has `Requirements = (HAS_MODULES =?= TRUE)`. You must also source the setup script in /cvmfs/snowmass21.opensciencegrid.org/ee_gg/setup.sh which will set up your environment. An example of a job submission to the OSPool for whizard is inlined below:
 
 Submit script:
 
