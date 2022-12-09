@@ -54,7 +54,7 @@ repos can run on the Snowmass21 host or reference the location of
 the images in the submit script for jobs to the OSPool.
 We present two examples to demonstrate the two cases.
 
-### Snowmass21 login host
+### Running a Singularity container on the login host
 
 Singularity is installed on the Snowmass21 host. Below is an example that runs a container located in cvmfs and binds a directory located in the distributed filesystem to /data:
 
