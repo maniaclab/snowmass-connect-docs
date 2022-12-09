@@ -1,5 +1,5 @@
 
-# Running Delphes
+## Running Delphes
 
 ### Snowmass21 login host
 
