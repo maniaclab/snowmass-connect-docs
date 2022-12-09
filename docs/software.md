@@ -5,7 +5,7 @@ repositories in cvmfs.
 
 ## Installed Software 
 
-1. The following packages are installed in `/software`:
+The following packages are installed in `/software`:
 
         cepcenv
         Delphes-3.4.2    
@@ -23,7 +23,7 @@ repositories in cvmfs.
 These can run on the local host or, if the executables are static,
 in HTCCondor jobs submitted to the OSPool.
 
-2. The following packages are installed in stash, `/collab/project/snowmass21/software/`:
+The following packages are installed in stash, `/collab/project/snowmass21/software/`:
 
         cepcenv    
         Delphes-3.4.2
