@@ -33,7 +33,7 @@ packages:
         LCIO
         miniDST
 
-Those are also available via CVMFS in ` /cvmfs/stash.osgstorage.org/osgconnect/collab/project/snowmass21/software`
+Those are also available via cvmfs in ` /cvmfs/stash.osgstorage.org/osgconnect/collab/project/snowmass21/software`
 and intended to run primarily as part HTCondor jobs to the OSPool.
 
 ## Software in cvmfs repositories
