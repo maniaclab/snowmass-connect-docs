@@ -1,0 +1,505 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.0">
+    
+    
+      
+        <title>Data Management - Snowmass21 Connect</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.89dc9fe3.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Snowmass21 Connect" class="md-header-nav__button md-logo" aria-label="Snowmass21 Connect">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Snowmass21 Connect
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Data Management
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Snowmass21 Connect" class="md-nav__button md-logo" aria-label="Snowmass21 Connect">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    Snowmass21 Connect
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../accounting/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Data Management
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Data Management" class="md-nav__link md-nav__link--active">
+      Data Management
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filesystems" class="md-nav__link">
+    Filesystems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transferring-data" class="md-nav__link">
+    Transferring data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-access-for-open-science-pool-jobs" class="md-nav__link">
+    Data Access for Open Science Pool jobs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../job_submission/" title="Job Submission" class="md-nav__link">
+      Job Submission
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../software/" title="Software Access" class="md-nav__link">
+      Software Access
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filesystems" class="md-nav__link">
+    Filesystems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transferring-data" class="md-nav__link">
+    Transferring data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-access-for-open-science-pool-jobs" class="md-nav__link">
+    Data Access for Open Science Pool jobs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="data-management">Data Management</h1>
+<p>This section provides a list of important information on how you can manage your data on the Snowmass21 login node <code>login.snowmass21.io</code>.</p>
+<h2 id="filesystems">Filesystems</h2>
+<p>The Snowmass Connect service has four filesystems you should be aware of: </p>
+<ol>
+<li><strong>Home</strong> directory. Your home directory, <code>/home/&lt;user_id&gt;</code>, has 50GB of storage available. It is recommended to use it for storing scripts, 
+submission files and small size data. Large input files for jobs on the grid should not be stored here.</li>
+<li><strong>Local private storage</strong> in<code>/work/&lt;user_id&gt;</code>. Each user directory has a quota of 5 TB to temporarily store data and build your own submission pipeline to the OSG. It can also be used as your private work area for local analysis or processing jobs on the login node. </li>
+<li><strong>Local shared storage</strong> in <code>/project/data</code>. This directory is for you to place data that needs to be shared with other users. Users can write there any data needed by multiple users and different jobs on the grid.</li>
+<li><strong>CephFS storage ("Stash")</strong> is accebible from the login node at <code>/collab</code> and is intended for datasets larger than 1GB each for jobs or for distribution to external institutions over http or Globus. There are two relevant subdirectories in <code>/collab</code>:  <ul>
+<li>For private user data: <code>/collab/user/&lt;user_id&gt;</code>. Each user directory has a 1 TB quota.</li>
+<li>For shared data the Snowmass21 project members: <code>/collab/project/snowmass21/data</code>. This is a 50TB shared storage allocation.</li>
+<li>Note that the <code>/collab/user/&lt;user_id&gt;</code> location is available directly from remote nodes to write output with the stashcp method - for large output files. The project space (<code>/collab/project/snowmass21</code>) is <em>not</em> accessible for direct write. </li>
+<li>Note also that using HTCondor for transfering files back from the worker nodes will use the NFS mount on the login node if data are directed to the <code>/collab</code> locations. Performace for large file writes will has less performance when compared to the direct method (stashcp).</li>
+</ul>
+</li>
+</ol>
+<h2 id="transferring-data">Transferring data</h2>
+<p>You can transfer data to Snowmass21 Connect using any of the three following methods:</p>
+<ol>
+<li>
+<p><strong>scp</strong>. For example: <code>scp -r &lt;file_or_directory&gt; &lt;user_id&gt;@login.snowmass21.io:/work/&lt;user_id&gt;/.</code> will copy a file or a directory
+from your local machine to your user directory in local storage. The ssh-keys used for your profile on the Snowmass Connect portal
+must stored on the local machine.</p>
+</li>
+<li>
+<p><strong>rsync</strong>. For example: <code>rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress test.transfer &lt;user_id&gt;@login.snowmass21.io:dump/</code> will copy the <code>test.transfer</code> file in the <code>/home/&lt;user_id&gt;/dump/</code> directory. If the directory
+does not exist, it will be created. As in <code>scp</code> the ssh-keys used for your profile on the Snowmass Connect portal
+must stored on the source machine.</p>
+</li>
+<li>
+<p><strong>Globus Connect</strong> can be used to transfer files to/from stash storage only. Instructions on how to set up Globus Connect Personal can be found 
+<a href="https://www.globus.org/globus-connect-personal">here</a>. Access to the stash storage endpoint is enabled by authenticating 
+against the Globus collection "OSG Connect CI Logon" using the GLobus Connect client. 
+You can search for the collection by name in the search bar of the File Manager.</p>
+</li>
+</ol>
+<p>In order to access the stash storage on the Snowmass login node via Globus online, you must have a certificate issued by CILogon. To obtain one:</p>
+<ul>
+<li>Logon with your institutional credentials at <a href="http://cilogon.org">http://cilogon.org</a></li>
+<li>Select "Create a Password Protected Certificate". Enter a password and download your encrypted certificate, named usercred.p12. The certificate can be obtained by using the openssl pcks12 command as: <code>openssl pkcs12 -in [your-cert-file] -clcerts -nokeys -out usercert.pem</code></li>
+<li>Email <a href="paschos@uchicago.edu">paschos@uchicago.edu</a> the output of the following command which will print out your DN (Distinguish Name): <code>openssl x509 -in usercert.pem -noout -subject</code></li>
+</ul>
+<p>Once your DN has been entered in the user access list you will be able to access the OSG Connect CI Logon collection with the Globus Connect client by 
+validating with your institution credentials. Navigate to the OSG Snowmass21 Collaborations Connect storage by typing in the Path box <code>/cephfs/osg/collab</code>. You can then navigate to your user directory as shown in the example below:</p>
+<p><img alt="" src="../snowmass_3.png" /></p>
+<p>Shown in the image above are two possible destinations for the data.</p>
+<ul>
+<li>Navigate to <code>/cephfs/osg/collab/project/snowmass21</code> if data are to be shared by multiple users.</li>
+<li>Navigate to <code>/cephfs/osg/user/&lt;user_id&gt;</code> if data are for the exclusive use of a single user.
+In both cases, users can create subdirectories and organize content by either using the Globus client interface or from the login.snowmass21.io node.</li>
+</ul>
+<p>On the right panel of the Globus Connect client tool you can search and connect to another collection. 
+The latter can be your own laptop/server or a collaboration end point that has provided a Globus Connect door for the researchers to use. To transfer files you can select the list files from your local computer and then select Start. To transfer files out simply reverse the direction of the process.</p>
+<p><strong>Important</strong>: You can not access home and work directories on the login server over the Globus door. Since you have access to the /stash/collab directory, you can login to login.snowmass21.io and move or copy files over to your home or work directory. </p>
+<h2 id="data-access-for-open-science-pool-jobs">Data Access for Open Science Pool jobs</h2>
+<p>There are four methods available:</p>
+<ol>
+<li>HTCondor File Transfer. This method is recommended for the majority of computational workflows running on the OSG. Users can employ this method if the total size of the input data per job does not exceed 1 GB. In addition, OSG recommends that the output data per job that need to be transfered back does not exceed 1 GB as well. To enable HTCondor File transfers for your input and output data, insert the following parameters anywhere in your HTCondor submit file:<pre><code>transfer_input_files = &lt;comma separated files or directories&gt;
+transfer_output_files = &lt;comma separated files or directories&gt;
+</code></pre>
+</li>
+</ol>
+<p>This method can leverage any storage location on the Snowmass21 Connect node. However it is recommended that you primarily use <code>/work/&lt;user_id&gt;</code> and avoid  <code>/home/&lt;user_id&gt;</code>.</p>
+<ol>
+<li>OSG's StashCache. To use this service, data should be placed either in <code>/collab/user/&lt;user_id&gt;</code> or 
+<code>/collab/project/snowmass21</code>. This method is recommended for input files larger than 1 GB each or 10 GB total from all input data. The recommended upper limit for the output files to be transfered back from the remote node is 10 GB per job. Users can use the stashcp tool to transfer data from their <code>/collab</code> space only to the remote host. You can insert the following command in your execution script to transfer data from <code>/collab/user/&lt;user_id&gt;</code> to the local
+directory on the remote worker node where your job is running:<pre><code>module load stashcache
+stashcp stash:///osgconnect/collab/user/&lt;user_id&gt;/&lt;input_file&gt; .
+</code></pre>
+</li>
+</ol>
+<p>To transfer data back to your collab space from the remote node run the following command in your execution script:</p>
+<pre><code>    stashcp &lt;output_file&gt; stash:///osgconnect/collab/user/&lt;user_id&gt;/&lt;output_file&gt;
+</code></pre>
+<p>Stashcp uses an XrootD client for the file transfers. You can use XrootD directly to access files on stash from a remote node as follows: </p>
+<pre><code>    xrdcp root://stash.osgconnect.net:1094//osgconnect/collab/project/snowmass21/&lt;directory&gt;/file .
+</code></pre>
+<p>For writes back from the job: </p>
+<pre><code>    xrdcp &lt;file&gt; root://stash.osgconnect.net:1094//osgconnect/collab/project/snowmass21/&lt;diretory&gt;/&lt;file&gt;
+</code></pre>
+<p>Note: The local filesystem on the snowmass node is <em>not</em> accessible by stashcp or xrdcp. You will need to use HTCondor transfer for files stored there. </p>
+<p>Data can also be accessed over cvmfs here: </p>
+<pre><code>  /cvmfs/stash.osgstorage.org/osgconnect/collab/project/snowmass21/data
+</code></pre>
+<ol>
+<li>
+<p>If the filesize of each input dataset exceeds 10 GB then an alternative method for transfers is the GridFTP protocol using the gfal-copy tool. Please reach out for a consultation to discuss if your workflow can benefit from access to a GridFTP door.</p>
+</li>
+<li>
+<p>Transfers over HTTP. Files stored in the shared namespace, <code>/collab/project/snowmass21</code> are public and also accessible via HTTP. To access datta there you can use linux tools like wget as shown in the following example:</p>
+<pre><code>wget http://stash.osgconnect.net/collab/project/snowmass21/&lt;file_name&gt;
+</code></pre>
+</li>
+</ol>
+<p>You can insert a line like the one above in your execution script to download datasets on the remote worker node where your job is running. Alternatively, you can declare those files inside your HTCondor submission script as follows:</p>
+<pre><code>    transfer_input_files = http://stash.osgconnect.net/collab/project/snowmass21/&lt;file_name&gt;
+</code></pre>
+<p>HTTP based transfers are best for filesizes up to 1GB.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../accounting/" title="Getting Started" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting Started
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../job_submission/" title="Job Submission" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Job Submission
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
