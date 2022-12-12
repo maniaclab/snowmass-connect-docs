@@ -98,7 +98,7 @@ File `run.sh` is a bash-shell script that contains a list of commands to be exec
 
 ## Additional Examples
 
-### Running Delphes On the login host
+### Running Delphes on the login host
 
 For local calculations on the Snowmass21 host, Delphes is installed in `/software/Delphes-3.4.2`. You must first execute the following setup script: `source /cvmfs/sft.cern.ch/lcg/views/LCG_92/x86_64-slc6-gcc62-opt/setup.sh` before using the executables. 
 
